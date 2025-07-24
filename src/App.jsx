@@ -1,5 +1,5 @@
 import './Styles/App.css';
-import pfp from './assets/pfp.jpg';
+import pfp from './assets/gifpfp.gif';
 import divider from './assets/div2.jpg';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 import { useState, useEffect } from 'react';
@@ -8,7 +8,7 @@ function App() {
 
   const [message, setMessage] = useState("");
 
-  // Typing animation setup
+  
   const fullText = `₊˚⊹⋆ Welcome to my World ₊⊹ 
 I love romance animes, 
 fantasy books & RPGs. 
@@ -24,7 +24,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
       if (index === fullText.length) {
         clearInterval(interval);
       }
-    }, 100); // adjust speed here (ms per letter)
+    }, 100); 
 
     return () => clearInterval(interval);
   }, []);
