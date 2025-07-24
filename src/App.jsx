@@ -1,5 +1,6 @@
 import './Styles/App.css';
 import pfp from './assets/pfp.jpg';
+import divider from './assets/div2.jpg';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 import { useState } from 'react';
 
@@ -35,9 +36,9 @@ function App() {
         <h1>Hi, I'm Shay!-`♡´-</h1>
 
         <div className="about-container">
-        <p>₊˚⊹⋆Welcome to my World₊⊹ <br />
+        <p>₊˚⊹⋆ Welcome to my World ₊⊹ <br />
         I love romance animes, <br /> fantasy books & RPGs. <br />
-        I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹</p>
+        I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ <br /> </p>
 
         <div className="socials">
         <a href="https://x.com/ctrlaltcherie" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
@@ -48,6 +49,8 @@ function App() {
        </a>
        </div>
        </div>
+
+       <img src={divider} alt="decorative divider" className="divider-image" />
 
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="message">Send me a message💌ᯓ★</label>
@@ -62,6 +65,8 @@ function App() {
           <button type="submit">Send</button>
         </form>
 
+        <img src={divider} alt="decorative divider" className="divider-image" />
+
         <div className="projects">
         <h2>Things I've made ᝰ.ᐟ </h2>
         <div className="project-buttons">
@@ -70,6 +75,8 @@ function App() {
          <a href="https://angyportal.love/" target="_blank" rel="noopener noreferrer">Angy Portal</a>
         </div>
        </div>
+
+       <img src={divider} alt="decorative divider" className="divider-image" />
 
         <div className="songs">
           <h2>─•──── 𖦤</h2>
