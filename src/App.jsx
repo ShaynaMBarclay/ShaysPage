@@ -1,9 +1,33 @@
 import './Styles/App.css';
 import pfp from './assets/pfp.jpg';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
+import { useState } from 'react';
 
 
 function App() {
+
+    const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+
+    
+    fetch("https://formspree.io/f/mldlbeda", {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Message sent! Thank you! 💌");
+          setMessage(""); 
+        } else {
+          alert("Oops! Something went wrong.");
+        }
+      })
+      .catch(() => alert("Oops! Something went wrong."));
+  };
+
   return (
     <div className="container">
       <div className="card">
@@ -25,9 +49,16 @@ function App() {
        </div>
        </div>
 
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="message">Send me a message💌ᯓ★</label>
-          <textarea id="message" placeholder="write something sweet..." />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="write something sweet..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
           <button type="submit">Send</button>
         </form>
 
