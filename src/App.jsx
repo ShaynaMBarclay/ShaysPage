@@ -4,35 +4,54 @@ import divider from './assets/div2.jpg';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 
-
 function App() {
 
-    const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("");
 
-    useEffect(() => {
-  const heartContainer = document.querySelector('.falling-hearts');
+  // Typing animation setup
+  const fullText = `₊˚⊹⋆ Welcome to my World ₊⊹ 
+I love romance animes, 
+fantasy books & RPGs. 
+I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
-  const createHeart = () => {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerHTML = '♡';
-    heart.style.left = `${Math.random() * 100}vw`;
-    heart.style.fontSize = `${Math.random() * 20 + 10}px`;
-    heart.style.animationDuration = `${Math.random() * 5 + 4}s`;
-    heartContainer.appendChild(heart);
+  const [typedText, setTypedText] = useState("");
 
-    setTimeout(() => heart.remove(), 8000); 
-  };
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setTypedText((prev) => prev + fullText.charAt(index));
+      index++;
+      if (index === fullText.length) {
+        clearInterval(interval);
+      }
+    }, 100); // adjust speed here (ms per letter)
 
-  const interval = setInterval(createHeart, 500);
+    return () => clearInterval(interval);
+  }, []);
 
-  return () => clearInterval(interval);
-}, []);
+  useEffect(() => {
+    const heartContainer = document.querySelector('.falling-hearts');
+
+    const createHeart = () => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '♡';
+      heart.style.left = `${Math.random() * 100}vw`;
+      heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+      heart.style.animationDuration = `${Math.random() * 5 + 4}s`;
+      heartContainer.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 5000);
+    };
+
+    const interval = setInterval(createHeart, 500);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
-    
     fetch("https://formspree.io/f/mldlbeda", {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
@@ -41,7 +60,7 @@ function App() {
       .then((response) => {
         if (response.ok) {
           alert("Message sent! Thank you! 💌");
-          setMessage(""); 
+          setMessage("");
         } else {
           alert("Oops! Something went wrong.");
         }
@@ -57,21 +76,28 @@ function App() {
         <h1>Hi, I'm Shay!-`♡´-</h1>
 
         <div className="about-container">
-        <p>₊˚⊹⋆ Welcome to my World ₊⊹ <br />
-        I love romance animes, <br /> fantasy books & RPGs. <br />
-        I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ <br /> </p>
+          <p
+            style={{
+              whiteSpace: 'pre-line',
+              fontFamily: '"Caveat", cursive',
+              fontSize: '1.7rem',
+              letterSpacing: '0.15em',
+            }}
+          >
+            {typedText}
+          </p>
 
-        <div className="socials">
-        <a href="https://x.com/ctrlaltcherie" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-        <FaTwitter  />
-        </a>
-        <a href="https://www.instagram.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ marginLeft: '1rem' }}>
-        <FaInstagram  />
-       </a>
-       </div>
-       </div>
+          <div className="socials">
+            <a href="https://x.com/ctrlaltcherie" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <FaTwitter />
+            </a>
+            <a href="https://www.instagram.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ marginLeft: '1rem' }}>
+              <FaInstagram />
+            </a>
+          </div>
+        </div>
 
-       <img src={divider} alt="decorative divider" className="divider-image" />
+        <img src={divider} alt="decorative divider" className="divider-image" />
 
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="message">Send me a message💌ᯓ★</label>
@@ -89,15 +115,15 @@ function App() {
         <img src={divider} alt="decorative divider" className="divider-image" />
 
         <div className="projects">
-        <h2>Things I've made ᝰ.ᐟ </h2>
-        <div className="project-buttons">
-         <a href="https://skindexanalyzer.com/" target="_blank" rel="noopener noreferrer">The Skindex</a>
-         <a href="https://myhappylittlejournal.com/" target="_blank" rel="noopener noreferrer">My Happy Lil Journal</a>
-         <a href="https://angyportal.love/" target="_blank" rel="noopener noreferrer">Angy Portal</a>
+          <h2>Things I've made ᝰ.ᐟ </h2>
+          <div className="project-buttons">
+            <a href="https://skindexanalyzer.com/" target="_blank" rel="noopener noreferrer">The Skindex</a>
+            <a href="https://myhappylittlejournal.com/" target="_blank" rel="noopener noreferrer">My Happy Lil Journal</a>
+            <a href="https://angyportal.love/" target="_blank" rel="noopener noreferrer">Angy Portal</a>
+          </div>
         </div>
-       </div>
 
-       <img src={divider} alt="decorative divider" className="divider-image" />
+        <img src={divider} alt="decorative divider" className="divider-image" />
 
         <div className="songs">
           <h2>─•──── 𖦤</h2>
