@@ -2,12 +2,32 @@ import './Styles/App.css';
 import pfp from './assets/pfp.jpg';
 import divider from './assets/div2.jpg';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function App() {
 
     const [message, setMessage] = useState("");
+
+    useEffect(() => {
+  const heartContainer = document.querySelector('.falling-hearts');
+
+  const createHeart = () => {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '♡';
+    heart.style.left = `${Math.random() * 100}vw`;
+    heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+    heart.style.animationDuration = `${Math.random() * 5 + 4}s`;
+    heartContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000); 
+  };
+
+  const interval = setInterval(createHeart, 500);
+
+  return () => clearInterval(interval);
+}, []);
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
@@ -31,6 +51,7 @@ function App() {
 
   return (
     <div className="container">
+      <div className="falling-hearts"></div>
       <div className="card">
         <img src={pfp} alt="profile" className="pfp" />
         <h1>Hi, I'm Shay!-`♡´-</h1>
