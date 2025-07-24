@@ -3,11 +3,13 @@
 
 
 body {
+    cursor: url('../assets/catcursor.png'), auto;
   background-image: url('../assets/newheartbg.jpg') !important;
   background-repeat: repeat;
   margin: 0;
   padding: 0;
 }
+
 
 .container {
   display: flex;
