@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=My+Soul&display=swap');
+
+
 body {
   margin: 0;
   background: #ffeef8;
@@ -12,15 +16,29 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+ font-family: "My Soul", cursive;
+ text-shadow: 0 0 5px #fa89c1, 0 0 10px #fa96c8, 0 0 20px #fba2cf;
+}
+
+p {
+  font-family: "Caveat", cursive;
+  font-size: 1.3rem;
+}
+
 .card {
-  background: white;
-  border: 6px solid #ffb6d9;
-  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
   padding: 2rem;
+  background: white;
+  border-radius: 30px;
+  border: 6px solid #ffb6d9;
+  box-shadow: 0 0 15px rgba(255, 182, 217, 0.4);
   max-width: 500px;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(255, 182, 217, 0.6);
+  margin: auto;
 }
 
 .pfp {
@@ -29,7 +47,7 @@ body {
   border-radius: 50%;
   border: 4px solid #ffcce1;
   object-fit: cover;
-  margin-bottom: 1rem;
+  flex-shrink: 0; 
 }
 
 .form {
@@ -84,3 +102,111 @@ body {
 .songs a:hover {
   text-decoration: underline;
 }
+
+.embed {
+ background-color: #ffe6f0; 
+  padding: 8px;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+.projects {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.projects h2 {
+  color: #ff6392;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-buttons a {
+  background-color: #000;
+  border: 2px solid #ff6392;
+  color: #ff6392;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px; 
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 8px #ff6392aa;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-buttons a:hover {
+  background-color: #ff6392;
+  color: #000;
+  box-shadow: 0 0 15px #ff6392ee;
+  transform: scale(1.05);
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; 
+}
+
+.about-container p {
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem 2rem;
+  background-color: #ff009d15;
+  color: #ff6392;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 0 8px #ff6392aa;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+  line-height: 1; 
+}
+
+.socials a:hover {
+  background-color: black;
+  color: pink;
+  box-shadow: 0 0 12px hotpink;
+  transform: scale(1.05);
+}
+
