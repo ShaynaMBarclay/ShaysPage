@@ -86,6 +86,13 @@ h1, h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.8rem;
   font-weight: 600;
+    display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto; 
 }
 
 .form textarea {
@@ -97,6 +104,7 @@ h1, h2 {
   padding: 1.4rem;
   resize: none;
   font-family: inherit;
+  
 }
 
 .form button {
