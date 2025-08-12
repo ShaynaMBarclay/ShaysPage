@@ -88,7 +88,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
           </p>
 
           <div className="socials">
-            <a href="https://x.com/ctrlaltcherie" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <a href="https://x.com/sylvariae" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FaTwitter />
             </a>
             <a href="https://www.instagram.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ marginLeft: '1rem' }}>
