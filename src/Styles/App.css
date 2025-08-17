@@ -211,7 +211,7 @@ h2 {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 0.3rem !important;
   flex-wrap: wrap; 
 }
 
@@ -418,6 +418,7 @@ h2 {
 .songs ul {
   list-style: none;
   padding: 0;
+  
 }
 
 .songs li {
@@ -652,6 +653,7 @@ h2 {
 
   .about-container p {
     max-width: 100%;
+    margin-bottom: 2rem !important;
   }
 
   .socials {
