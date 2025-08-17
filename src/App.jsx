@@ -99,6 +99,20 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
         <img src={divider} alt="decorative divider" className="divider-image" />
 
+        <div className="projects">
+          <h2>Things I've made ᝰ.ᐟ </h2>
+          <div className="project-buttons">
+            <a href="https://skindexanalyzer.com/" target="_blank" rel="noopener noreferrer">The Skindex</a>
+            <a href="https://myhappylittlejournal.com/" target="_blank" rel="noopener noreferrer">My Happy Lil Journal</a>
+            <a href="https://angyportal.love/" target="_blank" rel="noopener noreferrer">Angy Portal</a>
+            <a href="https://moonandcards.netlify.app/" target="_blank" rel="noopener noreferrer">Moon & Cards</a>
+          </div>
+        </div>
+
+        <img src={divider} alt="decorative divider" className="divider-image" />
+
+        
+
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="message">Send me a message💌ᯓ★</label>
           <textarea
@@ -111,17 +125,6 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
           />
           <button type="submit">Send</button>
         </form>
-
-        <img src={divider} alt="decorative divider" className="divider-image" />
-
-        <div className="projects">
-          <h2>Things I've made ᝰ.ᐟ </h2>
-          <div className="project-buttons">
-            <a href="https://skindexanalyzer.com/" target="_blank" rel="noopener noreferrer">The Skindex</a>
-            <a href="https://myhappylittlejournal.com/" target="_blank" rel="noopener noreferrer">My Happy Lil Journal</a>
-            <a href="https://angyportal.love/" target="_blank" rel="noopener noreferrer">Angy Portal</a>
-          </div>
-        </div>
 
         <img src={divider} alt="decorative divider" className="divider-image" />
 
