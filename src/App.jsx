@@ -73,7 +73,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
       <div className="falling-hearts"></div>
       <div className="card">
         <img src={pfp} alt="profile" className="pfp" />
-        <h1>Hi, I'm Shay!-`♡´-</h1>
+        <h1>Hi, I'm Shay ♡</h1>
 
         <div className="about-container">
           <p
