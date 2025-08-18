@@ -7,8 +7,9 @@
   align-items: center;
   flex-direction: column;
   z-index: 9999;
-  cursor: pointer;
+  
   animation: fadeIn 1.2s ease forwards;
+  cursor: url('../assets/pinkcursor.png'), auto;
 }
 
 .welcome-img {
