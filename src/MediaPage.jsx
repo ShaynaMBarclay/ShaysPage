@@ -9,37 +9,37 @@ function MediaPage() {
         <h2>World of Warcraft</h2>
         <div className="media-gallery">
           <div className="media-item">
-            <img src="/src/assets/wow1.png" alt="WoW 1" />
+            <img src="../assets/wow1.png" alt="WoW 1" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow2.jpeg" alt="WoW 2" />
+            <img src="../assets/wow2.jpeg" alt="WoW 2" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow3.jpeg" alt="WoW 3" />
+            <img src="../assets/wow3.jpeg" alt="WoW 3" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow4.jpeg" alt="WoW 4" />
+            <img src="../assets/wow4.jpeg" alt="WoW 4" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow5.jpeg" alt="WoW 5" />
+            <img src="../assets/wow5.jpeg" alt="WoW 5" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow6.png" alt="WoW 6" />
+            <img src="../assets/wow6.png" alt="WoW 6" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow7.png" alt="WoW 7" />
+            <img src="../assets/wow7.png" alt="WoW 7" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow8.png" alt="WoW 8" />
+            <img src="../assets/wow8.png" alt="WoW 8" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow9.png" alt="WoW 9" />
+            <img src="../assets/wow9.png" alt="WoW 9" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow10.jpeg" alt="WoW 10" />
+            <img src="../assets/wow10.jpeg" alt="WoW 10" />
           </div>
           <div className="media-item">
-            <img src="/src/assets/wow11.png" alt="WoW 11" />
+            <img src="../assets/wow11.png" alt="WoW 11" />
           </div>
         </div>
       </div>
