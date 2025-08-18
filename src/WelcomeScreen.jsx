@@ -15,7 +15,7 @@ export default function WelcomeScreen({ onEnter }) {
   return (
     <div className={`welcome-screen ${fadeOut ? "fade-out" : ""}`} onClick={handleClick}>
       <img src={welcomeImg} alt="Welcome" className="welcome-img" />
-      <p className="welcome-text">Click to enter ♡</p>
+      <p className="welcome-text">♡ Click to enter ♡</p>
     </div>
   );
 }
