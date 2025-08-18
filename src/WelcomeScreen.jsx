@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./Styles/Welcome.css";
 import welcomeImg from "./assets/sylvbean.png"
 
 export default function WelcomeScreen({ onEnter }) {
