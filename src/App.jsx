@@ -1,18 +1,16 @@
-import { useState } from "react";
-import WelcomeScreen from "./WelcomeScreen";
-import MainPage from "./MainPage";
+import './Styles/App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainScreen from './MainPage';
+import MediaPage from './MediaPage';
 
 function App() {
-  const [entered, setEntered] = useState(false);
-
   return (
-    <>
-      {!entered ? (
-        <WelcomeScreen onEnter={() => setEntered(true)} />
-      ) : (
-        <MainPage />
-      )}
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainScreen />} />
+        <Route path="/media" element={<MediaPage />} />
+      </Routes>
+    </Router>
   );
 }
 

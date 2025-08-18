@@ -1,5 +1,6 @@
 import './Styles/App.css';
 import pfp from './assets/gifpfp.gif';
+import { Link } from 'react-router-dom';
 import divider from './assets/div2.jpg';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 import { useState, useEffect } from 'react';
@@ -8,7 +9,6 @@ function App() {
 
   const [message, setMessage] = useState("");
 
-  
   const fullText = `₊˚⊹⋆ Welcome to my World ₊⊹ 
 I love romance animes, 
 fantasy books & RPGs. 
@@ -21,17 +21,13 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
     const interval = setInterval(() => {
       setTypedText((prev) => prev + fullText.charAt(index));
       index++;
-      if (index === fullText.length) {
-        clearInterval(interval);
-      }
+      if (index === fullText.length) clearInterval(interval);
     }, 100); 
-
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     const heartContainer = document.querySelector('.falling-hearts');
-
     const createHeart = () => {
       const heart = document.createElement('div');
       heart.classList.add('heart');
@@ -40,18 +36,14 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
       heart.style.fontSize = `${Math.random() * 20 + 10}px`;
       heart.style.animationDuration = `${Math.random() * 5 + 4}s`;
       heartContainer.appendChild(heart);
-
       setTimeout(() => heart.remove(), 5000);
     };
-
     const interval = setInterval(createHeart, 500);
-
     return () => clearInterval(interval);
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     fetch("https://formspree.io/f/mldlbeda", {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
@@ -99,6 +91,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
         <img src={divider} alt="decorative divider" className="divider-image" />
 
+        {/* Projects Section */}
         <div className="projects">
           <h2>Things I've made ᝰ.ᐟ </h2>
           <div className="project-buttons">
@@ -109,10 +102,18 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
           </div>
         </div>
 
+        {/* Divider before Media Section */}
         <img src={divider} alt="decorative divider" className="divider-image" />
 
-        
+        {/* Media Section */}
+        <div className="media-section">
+          <Link to="/media" className="my-media-button">Click here for my Media</Link>
+        </div>
 
+        {/* Divider after Media Section */}
+        <img src={divider} alt="decorative divider" className="divider-image" />
+
+        {/* Contact Form */}
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="message">Send me a message💌ᯓ★</label>
           <textarea
@@ -128,6 +129,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
         <img src={divider} alt="decorative divider" className="divider-image" />
 
+        {/* Songs Section */}
         <div className="songs">
           <h2>─•──── 𖦤</h2>
 
@@ -173,4 +175,3 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 }
 
 export default App;
-
