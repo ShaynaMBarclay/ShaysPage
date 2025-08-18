@@ -84,9 +84,9 @@ h1, h2 {
 }
 
 .form {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-family: "Great Vibes", cursive !important;
+  font-size: 2rem;
+  font-weight: 400;
     display: flex;
   flex-direction: column;
   align-items: center; 
@@ -94,35 +94,40 @@ h1, h2 {
   width: 100%;
   max-width: 400px;
   margin: 0 auto; 
+  letter-spacing: 5px;   
 }
 
 .form textarea {
-  font-size: 1rem;
+  font-size: 1.5rem !important;
+  letter-spacing: 5px;
   width: 100%;
   height: 100px;
   border: 2px solid #ffcce1;
   border-radius: 12px;
   padding: 1.4rem;
   resize: none;
-  font-family: inherit;
-  
+  font-family: "Caveat", cursive !important;
+  font-weight: 500;
 }
 
 .form button {
-  font-family: "Caveat", cursive;
-  font-size: 1.3rem;
+  font-family: "Great Vibes", cursive !important;
+  font-size: 1.5rem;
+  font-weight: 700;
   background: #ff85a2;
   color: white;
   border: none;
   padding: 0.6rem 1.3rem;
   margin-top: 1rem;
   border-radius: 20px;
-  cursor: pointer;
+  letter-spacing: 3px; 
+  cursor: url('../assets/catpointer.png'), auto !important;
   transition: background 0.2s ease;
 }
 
 .form button:hover {
   background: #ff6392;
+  cursor: url('../assets/catpointer.png'), auto !important;
 }
 
 h2 {
@@ -133,10 +138,12 @@ h2 {
 .songs ul {
   list-style: none;
   padding: 0;
+  cursor: url('../assets/catpointer.png'), auto !important;
 }
 
 .songs li {
   margin-bottom: 1rem;
+  cursor: url('../assets/catpointer.png'), auto !important;
 }
 
 .songs a {
@@ -144,10 +151,12 @@ h2 {
   color: #ff6392;
   text-decoration: none;
   font-weight: bold;
+  cursor: url('../assets/catpointer.png'), auto !important;
 }
 
 .songs a:hover {
   text-decoration: underline;
+  cursor: url('../assets/catpointer.png'), auto !important;
 }
 
 .embed {
@@ -155,6 +164,7 @@ h2 {
   padding: 8px;
   border-radius: 16px;
   display: inline-block;
+  cursor: url('../assets/catpointer.png'), auto !important;
 }
 
 .projects {
@@ -177,6 +187,7 @@ h2 {
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  cursor: url('../assets/catpointer.png'), auto !important;
 }
 
 .project-buttons a {
@@ -195,7 +206,7 @@ h2 {
     box-shadow 0.3s ease,
     transform 0.2s ease;
   user-select: none;
-  cursor: pointer;
+  cursor: url('../assets/catpointer.png'), auto !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -206,6 +217,7 @@ h2 {
   color: #000;
   box-shadow: 0 0 15px #fd8eafee;
   transform: scale(1.05);
+  cursor: url('../assets/catpointer.png'), auto !important;
 }
 
 .about-container {
@@ -242,21 +254,21 @@ h2 {
   border-radius: 9999px;
   text-decoration: none;
   box-shadow: 0 0 8px #ff6392aa;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.2s ease;
+  transition: 
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out,
+    transform 0.3s ease-in-out;
   user-select: none;
-  cursor: pointer;
-  line-height: 1; 
+  cursor: url('../assets/catpointer.png'), auto !important;
+  line-height: 1;
 }
 
 .socials a:hover {
   background-color: black;
-  color: pink;
-  box-shadow: 0 0 12px hotpink;
-  transform: scale(1.05);
+  color: hotpink;
+  box-shadow: 0 0 18px hotpink; 
+  transform: scale(1.08);       
 }
 
 .divider-image {
