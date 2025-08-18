@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 function MediaPage() {
+      useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="container">
+
+        <div className="container media-container">
       
       <div className="media-section">
         <h2>World of Warcraft</h2>
@@ -44,6 +49,7 @@ function MediaPage() {
 
       <div className="media-section-button">
         <Link to="/" className="my-media-button">← Back to Main</Link>
+      </div>
       </div>
     </div>
   );

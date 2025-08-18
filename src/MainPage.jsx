@@ -1,3 +1,4 @@
+
 import './Styles/App.css';
 import pfp from './assets/gifpfp.gif';
 import { Link } from 'react-router-dom';
@@ -6,6 +7,10 @@ import { FaTwitter, FaInstagram } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 
 function App() {
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const [message, setMessage] = useState("");
 
