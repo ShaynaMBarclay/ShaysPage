@@ -103,7 +103,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
             <a href="https://skindexanalyzer.com/" target="_blank" rel="noopener noreferrer">The Skindex</a>
             <a href="https://myhappylittlejournal.com/" target="_blank" rel="noopener noreferrer">My Happy Lil Journal</a>
             <a href="https://angyportal.love/" target="_blank" rel="noopener noreferrer">Angy Portal</a>
-            <a href="https://moonandcards.netlify.app/" target="_blank" rel="noopener noreferrer">Moon & Cards</a>
+            <a href="https://lune.cards/" target="_blank" rel="noopener noreferrer">Moon & Cards</a>
           </div>
         </div>
 
