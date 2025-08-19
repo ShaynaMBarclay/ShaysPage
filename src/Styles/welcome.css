@@ -20,7 +20,7 @@
 
 .welcome-text {
   color: rgb(0, 0, 0);
-  font-size: 3.5rem;
+  font-size: 2rem !important;
   font-weight: 700;
   font-family: "Great Vibes", cursive;
   margin-top: 1rem;
@@ -73,7 +73,7 @@
   }
 
   .welcome-text {
-    font-size: 2.7rem !important;
+    font-size: 2rem !important;
     text-align: center;
     padding: 0 1rem;
   }
@@ -86,7 +86,7 @@
   }
 
   .welcome-text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
     padding: 0 1rem;
   }
