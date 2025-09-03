@@ -119,6 +119,16 @@ h2 {
   h2 {
     font-size: 2.5rem;
   }
+   .media-links ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .media-links a {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
 }
 
 /* Mobile (up to 767px) */
@@ -138,7 +148,19 @@ h2 {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+    .media-links ul {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .media-links a {
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    width: 80%; 
     text-align: center;
   }
 }
