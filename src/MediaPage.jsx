@@ -12,6 +12,18 @@ function MediaPage() {
       
       <div className="media-section">
         <h2>World of Warcraft</h2>
+
+         <div className="media-links">
+    <h3>Links to Wallpapers</h3>
+    <ul>
+      <li><a href="https://x.com/Sylvariae/status/1962197356339720661" target="_blank" rel="noopener noreferrer">Hallowfall Wallpapers</a></li>
+      <li><a href="https://x.com/Sylvariae/status/1959011669616857159" target="_blank" rel="noopener noreferrer">Suramar Wallpapers</a></li>
+      <li><a href="https://x.com/Sylvariae/status/1960710691272147070" target="_blank" rel="noopener noreferrer">Revendreth Wallpapers</a></li>
+      <li><a href="https://x.com/Sylvariae/status/1960379034644156870" target="_blank" rel="noopener noreferrer">Emerald Dream Wallpapers</a></li>
+      <li><a href="https://x.com/Sylvariae/status/1959693947460309031" target="_blank" rel="noopener noreferrer">Ardenweald Wallpapers</a></li>
+    </ul>
+  </div>
+
         <div className="media-gallery">
           <div className="media-item"><img src="/media/wow1.png" alt="WoW 1" /></div>
           <div className="media-item"><img src="/media/wow2.jpeg" alt="WoW 2" /></div>
@@ -24,6 +36,9 @@ function MediaPage() {
           <div className="media-item"><img src="/media/wow9.png" alt="WoW 9" /></div>
           <div className="media-item"><img src="/media/wow10.jpeg" alt="WoW 10" /></div>
           <div className="media-item"><img src="/media/wow11.png" alt="WoW 11" /></div>
+          <div className="media-item"><img src="/media/wowsept.jpeg" alt="WoW 12" /></div>
+          <div className="media-item"><img src="/media/wowsept2.jpeg" alt="WoW 13" /></div>
+          <div className="media-item"><img src="/media/wowsept3.jpeg" alt="WoW 14" /></div>
         </div>
       </div>
 
