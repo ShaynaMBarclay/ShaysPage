@@ -1,16 +1,16 @@
-
 import './Styles/App.css';
 import pfp from './assets/gifpfp.gif';
 import { Link } from 'react-router-dom';
 import divider from './assets/div2.jpg';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";  
 import { useState, useEffect } from 'react';
 
 function App() {
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [message, setMessage] = useState("");
 
@@ -73,25 +73,30 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
         <h1>Hi, I'm Shay ♡</h1>
 
         <div className="about-container">
+          {/* Socials ABOVE bio */}
+          <div className="socials">
+            <a href="https://x.com/sylvariae" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <FaTwitter />
+            </a>
+            <a href="https://www.instagram.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="https://www.tiktok.com/@sylvariae" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <FaTiktok />
+            </a>
+          </div>
+
           <p
             style={{
               whiteSpace: 'pre-line',
               fontFamily: '"Caveat", cursive',
               fontSize: '1.7rem',
               letterSpacing: '0.15em',
+              textAlign: 'center',  
             }}
           >
             {typedText}
           </p>
-
-          <div className="socials">
-            <a href="https://x.com/sylvariae" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <FaTwitter />
-            </a>
-            <a href="https://www.instagram.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ marginLeft: '1rem' }}>
-              <FaInstagram />
-            </a>
-          </div>
         </div>
 
         <img src={divider} alt="decorative divider" className="divider-image" />
