@@ -96,11 +96,11 @@
   .white-eclipse { width: 70vw; height: 70vw; }
    .welcome-text {
     font-size: 2.5rem;
-    text-shadow: 
-      0 0 4px #fff,
-      0 0 8px #fff,
-      0 0 12px #fff,
-      0 0 16px #fff !important;
+       text-shadow: 
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 3px #fff !important; 
+  
   }
 }
 
@@ -109,10 +109,9 @@
   .white-eclipse { width: 80vw; height: 80vw; }
    .welcome-text {
     font-size: 2rem;
-    text-shadow: 
+        text-shadow: 
+      0 0 1px #fff,
       0 0 2px #fff,
-      0 0 4px #fff,
-      0 0 6px #fff,
-      0 0 8px #fff !important;
+      0 0 3px #fff !important; 
   }
 }
