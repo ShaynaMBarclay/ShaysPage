@@ -2,8 +2,8 @@
   position: fixed;
   inset: 0;
   width: 100vw;
-  height: 100vh; /* force full screen */
-  background: #0a0a0a; /* black background */
+  height: 100vh; 
+  background: #0a0a0a; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@
 
 .welcome-text {
   color: #fff; 
-  font-size: 3rem; /* make bigger */
+  font-size: 3rem; 
   font-weight: 700;
   font-family: "Great Vibes", cursive;
   margin-top: 1rem;
@@ -51,10 +51,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 50vw; /* responsive width */
-  max-width: 600px; /* optional max */
-  height: 50vw; /* responsive height */
-  max-height: 600px; /* optional max */
+  width: 50vw; 
+  max-width: 600px; 
+  height: 50vw; 
+  max-height: 600px; 
   border-radius: 50%;
   background: radial-gradient(circle at center, #000000 40%, #ffffff00 70%);
   box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.6);

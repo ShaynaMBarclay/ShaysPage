@@ -2,11 +2,23 @@
 @import "./welcome.css";
 @import "./MediaPage.css";
 
+/* Main content starts invisible */
+.main-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Fade-in effect when class applied */
+.main-container.fade-in {
+  opacity: 1;
+}
+
+
 /* === Base Styles === */
 body {
   margin: 0;
   padding: 0;
-  background: #000000; /* solid black */
+  background: #000000; 
   overflow-x: hidden;
   position: relative;
   font-family: 'Caveat', cursive;
@@ -124,7 +136,7 @@ h1, h2 {
 
 /* === Card & Profile === */
 .card {
-  position: relative; /* <-- Add this */
+  position: relative; 
   background-color: #ffffff50;
   justify-content: center;
   align-items: center;
@@ -385,7 +397,7 @@ h2 {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 0; /* above card background but below text/images */
+  z-index: 0; 
 }
 
 .star-emoji {
@@ -412,7 +424,7 @@ h2 {
     opacity: 1;
   }
   100% {
-    transform: translateY(100vh) rotate(360deg); /* full viewport height */
+    transform: translateY(100vh) rotate(360deg); 
     opacity: 0;
   }
 }

@@ -48,7 +48,6 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
     return () => clearInterval(interval);
   }, []);
 
-  // Background stars + moon (unchanged)
   useEffect(() => {
     const starsContainer = document.createElement('div');
     starsContainer.className = 'stars';
