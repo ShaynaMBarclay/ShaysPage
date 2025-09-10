@@ -14,21 +14,6 @@
   overflow: hidden;
 }
 
-.welcome-screen {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh; 
-  background: #0a0a0a; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 9999;
-  animation: fadeIn 1.2s ease forwards;
-  cursor: url('../assets/pinkcursor.png'), auto;
-  overflow: hidden;
-}
 
 /* Welcome text initially invisible, fade in with soft glow */
 .welcome-text {
@@ -91,12 +76,33 @@
   z-index: 1;
   pointer-events: none;
   animation: glowPulseWhite 2.5s ease-in-out infinite alternate;
+  
+  
 }
+
+.white-eclipse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8) 0%, transparent 60%);
+  opacity: 0;
+  pointer-events: none;
+  animation: eclipseShine 5s ease-in-out 1 forwards;
+  z-index: 2;
+}
+
+
 
 @keyframes glowPulseWhite {
   0% { box-shadow: 0 0 60px 30px rgba(255,255,255,0.4); }
-  50% { box-shadow: 0 0 120px 60px rgba(255,255,255,0.8); }
   100% { box-shadow: 0 0 100px 50px rgba(255,255,255,0.6); }
+}
+
+@keyframes eclipseShine {
+  0% { opacity: 0; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(0.9); }
 }
 
 /* Animations */
