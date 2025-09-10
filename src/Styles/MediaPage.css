@@ -185,6 +185,14 @@ h2 {
     font-size: 1rem;
     padding: 6px 12px;
   }
+    .my-media-button:hover {
+    text-shadow: 
+      0 0 1px #ffb6d9,
+      0 0 2px #ffb6d9,
+      0 0 3px #ff69b4,
+      0 0 4px #ff69b4,
+      0 0 5px #ff1493;
+  }
 }
 
 /* Mobile (up to 767px) */
@@ -218,5 +226,13 @@ h2 {
     padding: 6px 10px;
     width: 80%; 
     text-align: center;
+  }
+    .my-media-button:hover {
+    text-shadow: 
+      0 0 1px #ffb6d9,
+      0 0 2px #ffb6d9,
+      0 0 3px #ff69b4,
+      0 0 4px #ff69b4,
+      0 0 5px #ff1493;
   }
 }

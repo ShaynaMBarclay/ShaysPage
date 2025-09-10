@@ -94,9 +94,25 @@
 @media (max-width: 768px) {
   .welcome-text { font-size: 2.5rem; }
   .white-eclipse { width: 70vw; height: 70vw; }
+   .welcome-text {
+    font-size: 2.5rem;
+    text-shadow: 
+      0 0 4px #fff,
+      0 0 8px #fff,
+      0 0 12px #fff,
+      0 0 16px #fff !important;
+  }
 }
 
 @media (max-width: 480px) {
   .welcome-text { font-size: 2rem; }
   .white-eclipse { width: 80vw; height: 80vw; }
+   .welcome-text {
+    font-size: 2rem;
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 8px #fff !important;
+  }
 }
