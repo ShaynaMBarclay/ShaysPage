@@ -14,16 +14,39 @@
   overflow: hidden;
 }
 
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh; 
+  background: #0a0a0a; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  animation: fadeIn 1.2s ease forwards;
+  cursor: url('../assets/pinkcursor.png'), auto;
+  overflow: hidden;
+}
+
+/* Welcome text initially invisible, fade in with soft glow */
 .welcome-text {
   color: #fff; 
   font-size: 3rem; 
   font-weight: 700;
   font-family: "Great Vibes", cursive;
   margin-top: 1rem;
-  animation: fadeInUp 1.5s ease, glowPulseText 2.5s ease-in-out infinite alternate;
-  cursor: url('../assets/pointer.png'), auto !important;
   z-index: 2;
   text-align: center;
+  cursor: url('../assets/pointer.png'), auto !important;
+
+  opacity: 0; /* start invisible */
+
+  /* Animations: fade-in delayed, glow continues */
+  animation: 
+    fadeInText 2s ease forwards 1s, 
+    glowPulseText 2.5s ease-in-out infinite alternate;
 
   /* White glow */
   text-shadow: 
@@ -31,6 +54,12 @@
     0 0 20px #fff,
     0 0 30px #fff,
     0 0 40px #fff;
+}
+
+/* Fade-in for welcome text */
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Pulsing glow animation */
@@ -92,20 +121,20 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .welcome-text { font-size: 2.5rem; }
+  .welcome-text { font-size: 1.6rem !important; }
   .white-eclipse { width: 70vw; height: 70vw; }
    .welcome-text {
     font-size: 2.5rem;
        text-shadow: 
-      0 0 1px #fff,
       0 0 2px #fff,
-      0 0 3px #fff !important; 
+      0 0 4px #fff,
+      0 0 6px #fff !important; 
   
   }
 }
 
 @media (max-width: 480px) {
-  .welcome-text { font-size: 2rem; }
+  .welcome-text { font-size: 1.6rem !important; }
   .white-eclipse { width: 80vw; height: 80vw; }
    .welcome-text {
     font-size: 2rem;
