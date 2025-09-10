@@ -1,26 +1,23 @@
 import './Styles/App.css';
 import pfp from './assets/gifpfp.gif';
 import { Link } from 'react-router-dom';
-import divider from './assets/div2.jpg';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";  
 import { useState, useEffect } from 'react';
 
-function App() {
-
+function MainPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const [message, setMessage] = useState("");
-
   const fullText = `₊˚⊹⋆ Welcome to my World ₊⊹ 
 I love romance animes, 
 fantasy books & RPGs. 
 I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
-
   const [typedText, setTypedText] = useState("");
 
+  // Typing effect
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
@@ -31,20 +28,52 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
     return () => clearInterval(interval);
   }, []);
 
+  // Falling stars/kaomojis inside the card
   useEffect(() => {
-    const heartContainer = document.querySelector('.falling-hearts');
-    const createHeart = () => {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.innerHTML = '♡';
-      heart.style.left = `${Math.random() * 100}vw`;
-      heart.style.fontSize = `${Math.random() * 20 + 10}px`;
-      heart.style.animationDuration = `${Math.random() * 5 + 4}s`;
-      heartContainer.appendChild(heart);
-      setTimeout(() => heart.remove(), 5000);
+    const starContainer = document.querySelector('.falling-stars');
+    const emojis = ['★', '☆', '♡', '✧', '✩']; // stars & hearts & cute symbols
+
+    const createStar = () => {
+      const star = document.createElement('div');
+      star.classList.add('star-emoji');
+      star.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.fontSize = `${Math.random() * 20 + 10}px`;
+      star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      starContainer.appendChild(star);
+      setTimeout(() => star.remove(), 5000);
     };
-    const interval = setInterval(createHeart, 500);
+
+    const interval = setInterval(createStar, 400);
     return () => clearInterval(interval);
+  }, []);
+
+  // Background stars + moon (unchanged)
+  useEffect(() => {
+    const starsContainer = document.createElement('div');
+    starsContainer.className = 'stars';
+    document.body.appendChild(starsContainer);
+
+    for (let i = 0; i < 150; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 3 + 1 + 'px';
+      star.style.width = size;
+      star.style.height = size;
+      star.style.top = Math.random() * 100 + 'vh';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.animationDuration = Math.random() * 2 + 1 + 's';
+      starsContainer.appendChild(star);
+    }
+
+    const moon = document.createElement('div');
+    moon.className = 'moon';
+    document.body.appendChild(moon);
+
+    return () => {
+      starsContainer.remove();
+      moon.remove();
+    };
   }, []);
 
   const handleSubmit = (e) => {
@@ -67,13 +96,12 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
   return (
     <div className="container">
-      <div className="falling-hearts"></div>
       <div className="card">
+        <div className="falling-stars"></div> {/* falling stars inside the card */}
         <img src={pfp} alt="profile" className="pfp" />
         <h1>Hi, I'm Shay ♡</h1>
 
         <div className="about-container">
-          {/* Socials ABOVE bio */}
           <div className="socials">
             <a href="https://x.com/sylvariae" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FaTwitter />
@@ -99,9 +127,9 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
           </p>
         </div>
 
-        <img src={divider} alt="decorative divider" className="divider-image" />
+        <div className="pink-divider"></div>
 
-        {/* Projects Section */}
+
         <div className="projects">
           <h2>Things I've made ᝰ.ᐟ </h2>
           <div className="project-buttons">
@@ -113,18 +141,16 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
           </div>
         </div>
 
-        {/* Divider before Media Section */}
-        <img src={divider} alt="decorative divider" className="divider-image" />
+        <div className="pink-divider"></div>
 
-        {/* Media Section */}
+
         <div className="media-section">
           <Link to="/media" className="my-media-button">Click here for my Media</Link>
         </div>
 
-        {/* Divider after Media Section */}
-        <img src={divider} alt="decorative divider" className="divider-image" />
+        <div className="pink-divider"></div>
 
-        {/* Contact Form */}
+
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="message">Send me a message💌ᯓ★</label>
           <textarea
@@ -138,12 +164,11 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
           <button type="submit">Send</button>
         </form>
 
-        <img src={divider} alt="decorative divider" className="divider-image" />
+        <div className="pink-divider"></div>
 
-        {/* Songs Section */}
+
         <div className="songs">
           <h2>─•──── 𖦤</h2>
-
           <div className="embed">
             <iframe
               style={{ borderRadius: '12px' }}
@@ -155,7 +180,6 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
               loading="lazy"
             ></iframe>
           </div>
-
           <div className="embed">
             <iframe
               style={{ borderRadius: '12px' }}
@@ -167,7 +191,6 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
               loading="lazy"
             ></iframe>
           </div>
-
           <div className="embed">
             <iframe
               style={{ borderRadius: '12px' }}
@@ -185,4 +208,4 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
   );
 }
 
-export default App;
+export default MainPage;
