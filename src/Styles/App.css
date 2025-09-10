@@ -164,12 +164,16 @@ h1, h2 {
   letter-spacing: 5px;   
 }
 
+.form label {
+  color: white;
+}
+
 .form textarea {
   font-size: 1.5rem !important;
   letter-spacing: 5px;
   width: 100%;
   height: 100px;
-  border: 2px solid #ffcce1;
+  border: 3px solid #ffc0da;
   border-radius: 12px;
   padding: 1.4rem;
   resize: none;
@@ -188,18 +192,18 @@ h1, h2 {
   margin-top: 1rem;
   border-radius: 20px;
   letter-spacing: 3px; 
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
   transition: background 0.2s ease;
 }
 
 .form button:hover {
   background: #ff6392;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 /* === Headings === */
 h2 {
-  color: #ff6392;
+  color: #ffffff !important;
   font-size: 4rem !important;
   margin-bottom: 5rem;
 }
@@ -208,12 +212,12 @@ h2 {
 .songs ul {
   list-style: none;
   padding: 0;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 .songs li {
   margin-bottom: 1rem;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 .songs a {
@@ -221,12 +225,12 @@ h2 {
   color: #ff6392;
   text-decoration: none;
   font-weight: bold;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 .songs a:hover {
   text-decoration: underline;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 .embed {
@@ -234,7 +238,7 @@ h2 {
   padding: 8px;
   border-radius: 16px;
   display: inline-block;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 /* === Projects === */
@@ -258,7 +262,7 @@ h2 {
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 .project-buttons a {
@@ -277,7 +281,7 @@ h2 {
     box-shadow 0.3s ease,
     transform 0.2s ease;
   user-select: none;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -288,7 +292,7 @@ h2 {
   color: #000;
   box-shadow: 0 0 15px #fd8eafee;
   transform: scale(1.05);
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 /* === About Section === */
@@ -344,7 +348,7 @@ h2 {
     box-shadow 0.4s ease-in-out,
     transform 0.3s ease-in-out;
   user-select: none;
-  cursor: url('../assets/catpointer.png'), auto !important;
+  cursor: url('../assets/pointer.png'), auto !important;
   line-height: 1;
   opacity: 0; 
   animation: fadeInUp 0.8s forwards;

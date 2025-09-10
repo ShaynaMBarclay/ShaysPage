@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import welcomeImg from "./assets/sylvbean.png"
+import { useState } from "react";
 
 export default function WelcomeScreen({ onEnter }) {
   const [fadeOut, setFadeOut] = useState(false);
@@ -13,7 +12,9 @@ export default function WelcomeScreen({ onEnter }) {
 
   return (
     <div className={`welcome-screen ${fadeOut ? "fade-out" : ""}`} onClick={handleClick}>
-      <img src={welcomeImg} alt="Welcome" className="welcome-img" />
+      {/* White Eclipse */}
+      <div className="white-eclipse"></div>
+
       <p className="welcome-text">♡ Click to enter ♡</p>
     </div>
   );
