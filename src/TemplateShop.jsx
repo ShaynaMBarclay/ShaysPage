@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 
 import template1 from "./assets/goth.png";
 import template2 from "./assets/pastel.png";
 
 const templates = [
-  { id: 1, title: "Gothic Template", image: template1, link: "#" },
-  { id: 2, title: "Pastel Goth Template", image: template2, link: "#" },
+  { id: "1", title: "Gothic Solar Eclipse Template", image: template1 },
+  { id: "2", title: "Pastel Goth Template", image: template2 },
 ];
 
 function TemplatesShop() {
@@ -40,13 +40,21 @@ function TemplatesShop() {
         <p>Click on a template to view details.</p>
 
         <div className="template-grid">
-          {templates.map((template) => (
-            <a href={template.link} key={template.id} className="template-card">
-              <img src={template.image} alt={template.title} />
-              <h2>{template.title}</h2>
-            </a>
-          ))}
-        </div>
+  {templates.map((template) => (
+    <Link
+      to={`/shop/${template.id}`}
+      key={template.id}
+      className="template-card"
+    >
+      <img
+        src={template.image}
+        alt={template.title}
+        className="template-card-img"
+      />
+      <h2>{template.title}</h2>
+    </Link>
+  ))}
+</div>
       </div>
     </div>
   );

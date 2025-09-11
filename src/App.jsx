@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import MainScreen from './MainPage';
 import MediaPage from './MediaPage';
 import TemplatesShop from './TemplateShop';
+import TemplateDetail from "./TemplateDetailPage";
 import WelcomeScreen from './WelcomeScreen';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Route path="/" element={<MainScreen />} />
               <Route path="/media" element={<MediaPage />} />
               <Route path="/shop" element={<TemplatesShop />} />
+              <Route path="/shop/:id" element={<TemplateDetail />} />
             </Routes>
           </Router>
         </div>

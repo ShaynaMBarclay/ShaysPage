@@ -2,6 +2,7 @@
 @import "./welcome.css";
 @import "./MediaPage.css";
 @import "./Shop.css";
+@import "./Detail.css";
 
 /* Main content starts invisible */
 .main-container {
