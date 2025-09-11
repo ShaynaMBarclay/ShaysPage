@@ -43,7 +43,7 @@ function TemplatesShop() {
         </div>
 
         <h1>Templates Shop</h1>
-        <p>Click on a template to view details.</p>
+        <p>Click on a template to view details. The shop is still in the works. More templates and detailed template descriptions, including images, screen recordings, and tutorials will be added soon!</p>
 
         <div className="template-grid">
           {templates.map((template) => (
