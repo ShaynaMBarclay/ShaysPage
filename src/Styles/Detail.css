@@ -1,3 +1,5 @@
+/* === Detail Page CSS with Responsive Fixes === */
+
 /* Detail Page Container */
 .detail-page .detail-container {
   display: flex;
@@ -73,16 +75,15 @@
 
 /* Template Image for Detail Page */
 .detail-page .detail-img {
-  width: 800px;       
-  max-width: 90%;     
-  height: auto;       
+  width: 100% !important;
+  max-width: 800px !important;
+  height: auto !important;
   border-radius: 15px;
   margin-bottom: 1.5rem;
   border: 3px solid #ffb6d9;
   box-shadow: 0 0 25px #fba2cf50;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .detail-page .detail-img:hover {
   transform: scale(1.03);
   box-shadow: 0 0 35px #fba2cfaa;
@@ -91,14 +92,14 @@
 /* Titles */
 .detail-page h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 2.8rem;
+  font-size: 2.8rem !important;
   text-shadow: 0 0 5px #fa89c1, 0 0 10px #fba2cf, 0 0 20px #fba2cf;
   margin-bottom: 1rem;
 }
 
 .detail-page h2 {
   font-family: "Caveat", cursive;
-  font-size: 2rem;
+  font-size: 2rem !important;
   color: #ff6392;
   text-shadow: 0 0 5px #fba2cf;
   margin-bottom: 2rem;
@@ -108,9 +109,9 @@
 .detail-page .back-link {
   color: #fff;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   border: 2px solid #ffb6d9;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem !important;
   border-radius: 15px;
   transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -121,14 +122,28 @@
   box-shadow: 0 0 15px #fba2cfaa;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .detail-page h1 { font-size: 2.2rem; }
-  .detail-page h2 { font-size: 1.6rem; }
-  .detail-page .detail-img { width: 220px; height: auto; }
+/* === Responsive Adjustments === */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .detail-page h1 { font-size: 2.4rem !important; }
+  .detail-page h2 { font-size: 1.8rem !important; }
+  .detail-page .detail-img { max-width: 500px !important; height: auto !important; }
+  .detail-page .back-link { font-size: 1.3rem !important; padding: 0.5rem 0.9rem !important; }
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .detail-page h1 { font-size: 2rem !important; }
+  .detail-page h2 { font-size: 1.5rem !important; }
+  .detail-page .detail-img { max-width: 320px !important; height: auto !important; }
+  .detail-page .back-link { font-size: 1.2rem !important; padding: 0.4rem 0.8rem !important; }
+}
+
+/* Small Mobile */
 @media (max-width: 480px) {
-  .detail-page h1 { font-size: 1.8rem; }
-  .detail-page h2 { font-size: 1.4rem; }
-  .detail-page .detail-img { width: 160px; height: auto; }
+  .detail-page h1 { font-size: 1.6rem !important; }
+  .detail-page h2 { font-size: 1.2rem !important; }
+  .detail-page .detail-img { max-width: 220px !important; height: auto !important; }
+  .detail-page .back-link { font-size: 1rem !important; padding: 0.3rem 0.6rem !important; }
 }
