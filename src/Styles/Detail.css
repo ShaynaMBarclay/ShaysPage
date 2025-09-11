@@ -107,19 +107,25 @@
 
 /* Back Link */
 .detail-page .back-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem !important;
+    display: inline-block;
+  background: linear-gradient(90deg, #fa89c1, #fba2cf);
+  color: white;
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  padding: 0.6rem 1.8rem;
+  border-radius: 20px;
   border: 2px solid #ffb6d9;
-  padding: 0.5rem 1rem !important;
-  border-radius: 15px;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #fa89c1aa, 0 0 20px #fba2cfa0;
 }
 .detail-page .back-link:hover {
-  background: #ff6392;
-  color: black;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #fba2cfaa;
+    transform: scale(1.05);
+  box-shadow: 0 0 20px #fa89c1ff, 0 0 35px #fba2cfff;
+  background: linear-gradient(90deg, #fba2cf, #fa89c1);
+  color: #fff;
+  cursor: url('../assets/pointer.png'), auto !important;
 }
 
 /* === Responsive Adjustments === */

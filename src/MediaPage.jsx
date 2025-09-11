@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function MediaPage() {
@@ -36,6 +36,11 @@ function MediaPage() {
   return (
     <div className="container">
       <div className="container media-container">
+
+        {/* === Back to Main Button at Top === */}
+        <div className="media-section-button" style={{ marginBottom: '2rem' }}>
+          <Link to="/" className="my-media-button">← Back to Main</Link>
+        </div>
 
         {/* === World of Warcraft Section === */}
         <div className="media-section">
@@ -92,10 +97,6 @@ function MediaPage() {
           </div>
         </div>
 
-        {/* === Back Button === */}
-        <div className="media-section-button">
-          <Link to="/" className="my-media-button">← Back to Main</Link>
-        </div>
       </div>
     </div>
   );
