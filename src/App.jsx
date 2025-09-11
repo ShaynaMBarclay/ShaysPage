@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import MainScreen from './MainPage';
 import MediaPage from './MediaPage';
+import TemplatesShop from './TemplateShop';
 import WelcomeScreen from './WelcomeScreen';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Routes>
               <Route path="/" element={<MainScreen />} />
               <Route path="/media" element={<MediaPage />} />
+              <Route path="/shop" element={<TemplatesShop />} />
             </Routes>
           </Router>
         </div>

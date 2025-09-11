@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: 'Caveat', cursive;
+  overflow-x: hidden;
+}
+
+/* Fade-in effect */
+.main-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.main-container.fade-in {
+  opacity: 1;
+}
+
+/* Centered content */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Headings */
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  text-shadow: 0 0 5px #fa89c1, 0 0 10px #fba2cf, 0 0 20px #fba2cf;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.7rem;
+  letter-spacing: 0.1em;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+/* Stars & moon animations (from your existing styles) */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.3; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.moon {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff9e6;
+  box-shadow: 0 0 25px 10px rgba(255, 245, 200, 0.6);
+  z-index: -1;
+  animation: floatMoon 4s ease-in-out infinite;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #000;
+}
+
+@keyframes floatMoon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.template-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  border: 3px solid #ffb6d9;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  min-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.template-card img {
+  width: 550px;   /* bigger image */
+  height: 400px;  
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 0.8rem;
+  border: 2px solid #ffb6d9;
+}
+
+.template-card h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem !important;
+  text-align: center;
+  margin: 0;
+}
+
+.template-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 20px #fba2cf;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .template-card img {
+    width: 200px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .template-card img {
+    width: 160px;
+    height: 100px;
+  }
+}
