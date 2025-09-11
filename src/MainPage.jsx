@@ -31,7 +31,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
   // Falling stars/kaomojis inside the card
   useEffect(() => {
     const starContainer = document.querySelector('.falling-stars');
-    const emojis = ['★', '☆', '♡', '✧', '✩']; // stars & hearts & cute symbols
+    const emojis = ['★', '☆', '♡', '✧', '✩'];
 
     const createStar = () => {
       const star = document.createElement('div');
@@ -48,6 +48,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
     return () => clearInterval(interval);
   }, []);
 
+  // Background stars & moon
   useEffect(() => {
     const starsContainer = document.createElement('div');
     starsContainer.className = 'stars';
@@ -96,7 +97,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
   return (
     <div className="container">
       <div className="card">
-        <div className="falling-stars"></div> {/* falling stars inside the card */}
+        <div className="falling-stars"></div>
         <img src={pfp} alt="profile" className="pfp" />
         <h1>Hi, I'm Shay ♡</h1>
 
@@ -113,21 +114,25 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
             </a>
           </div>
 
-          <p
-            style={{
-              whiteSpace: 'pre-line',
-              fontFamily: '"Caveat", cursive',
-              fontSize: '1.7rem',
-              letterSpacing: '0.15em',
-              textAlign: 'center',  
-            }}
-          >
+          <p style={{
+            whiteSpace: 'pre-line',
+            fontFamily: '"Caveat", cursive',
+            fontSize: '1.7rem',
+            letterSpacing: '0.15em',
+            textAlign: 'center',
+          }}>
             {typedText}
           </p>
         </div>
 
         <div className="pink-divider"></div>
 
+        {/* === Template Shop Section Added Above Things I've Made === */}
+        <div className="template-shop-section">
+          <Link to="/shop" className="shop-link-button">💻 Visit My Template Shop</Link>
+        </div>
+
+        <div className="pink-divider"></div>
 
         <div className="projects">
           <h2>Things I've made ᝰ.ᐟ </h2>
@@ -142,13 +147,11 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
         <div className="pink-divider"></div>
 
-
         <div className="media-section">
           <Link to="/media" className="my-media-button">Click here for my Media</Link>
         </div>
 
         <div className="pink-divider"></div>
-
 
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="message">Send me a message💌ᯓ★</label>
@@ -164,7 +167,6 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
         </form>
 
         <div className="pink-divider"></div>
-
 
         <div className="songs">
           <h2>─•──── 𖦤</h2>
@@ -202,6 +204,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
             ></iframe>
           </div>
         </div>
+
       </div>
     </div>
   );

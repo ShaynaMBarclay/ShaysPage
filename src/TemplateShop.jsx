@@ -36,25 +36,31 @@ function TemplatesShop() {
       <div className="moon"></div>
 
       <div className="container">
+
+        {/* === Return to Main Page Button === */}
+        <div className="return-main-button-container">
+          <Link to="/" className="return-main-button">← Return to Main Page</Link>
+        </div>
+
         <h1>Templates Shop</h1>
         <p>Click on a template to view details.</p>
 
         <div className="template-grid">
-  {templates.map((template) => (
-    <Link
-      to={`/shop/${template.id}`}
-      key={template.id}
-      className="template-card"
-    >
-      <img
-        src={template.image}
-        alt={template.title}
-        className="template-card-img"
-      />
-      <h2>{template.title}</h2>
-    </Link>
-  ))}
-</div>
+          {templates.map((template) => (
+            <Link
+              to={`/shop/${template.id}`}
+              key={template.id}
+              className="template-card"
+            >
+              <img
+                src={template.image}
+                alt={template.title}
+                className="template-card-img"
+              />
+              <h2>{template.title}</h2>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
