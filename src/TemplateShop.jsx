@@ -13,6 +13,8 @@ function TemplatesShop() {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
+     window.scrollTo(0, 0);
+     
     setFadeIn(true);
   }, []);
 
