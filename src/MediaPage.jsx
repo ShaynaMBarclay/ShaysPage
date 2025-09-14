@@ -54,14 +54,17 @@ function MediaPage() {
               <li><a href="https://x.com/Sylvariae/status/1960710691272147070" target="_blank" rel="noopener noreferrer">Revendreth Wallpapers</a></li>
               <li><a href="https://x.com/Sylvariae/status/1960379034644156870" target="_blank" rel="noopener noreferrer">Emerald Dream Wallpapers</a></li>
               <li><a href="https://x.com/Sylvariae/status/1959693947460309031" target="_blank" rel="noopener noreferrer">Ardenweald Wallpapers</a></li>
+              <li><a href="https://x.com/Sylvariae/status/1964413159877595195" target="_blank" rel="noopener noreferrer">Eternal Palace Wallpapers</a></li>
             </ul>
           </div>
 
           <div className="media-gallery">
-            <div className="media-item"><img src="/media/wow12.png" alt="WoW 12" /></div>
+            <div className="media-item"><img src="/media/wow12.png" alt="WoW 12.5" /></div>
+            <div className="media-item"><img src="/media/wow13.jpg" alt="WoW 5" /></div>
             <div className="media-item"><img src="/media/wow5.jpeg" alt="WoW 5" /></div>
             <div className="media-item"><img src="/media/wowsept.jpeg" alt="WoW 12" /></div>
             <div className="media-item"><img src="/media/wowsept2.jpeg" alt="WoW 13" /></div>
+            <div className="media-item"><img src="/media/wow18.jpg" alt="WoW 5" /></div>
             <div className="media-item"><img src="/media/wowsept3.jpeg" alt="WoW 14" /></div>
           </div>
         </div>
