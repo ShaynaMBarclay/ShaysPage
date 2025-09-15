@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 import template1 from "./assets/goth.png";
 import template2 from "./assets/pastel.png";
+import template3 from "./assets/fantasy.png";
 
 const templates = [
   { id: "1", title: "Gothic Solar Eclipse Template", image: template1 },
   { id: "2", title: "Pastel Goth Template", image: template2 },
+  { id: "3", title: "Fantasy Template", image: template3 },
 ];
 
 function TemplatesShop() {
@@ -45,7 +47,7 @@ function TemplatesShop() {
         </div>
 
         <h1>Templates Shop</h1>
-        <p>Click on a template to view details. The shop is still in the works. More templates and detailed template descriptions, including images, screen recordings, and tutorials will be added soon!</p>
+        <p>Click on a template to view details. The shop is still in the works. More templates and detailed template descriptions, including images, screen recordings, live demo links, and tutorials will be added soon!</p>
 
         <div className="template-grid">
           {templates.map((template) => (

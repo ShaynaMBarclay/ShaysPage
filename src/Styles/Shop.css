@@ -126,8 +126,9 @@ p {
 }
 
 .template-card-img {
-  width: 500px !important;
-  height: 350px;
+  width: 100%; 
+  max-width: 500px; 
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
   margin-bottom: 0.8rem;
