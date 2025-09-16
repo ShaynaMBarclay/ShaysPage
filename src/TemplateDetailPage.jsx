@@ -18,15 +18,34 @@ function TemplateDetail() {
 
   return (
     <div className="detail-page">
+      {/* Moon */}
+      <div className="moon"></div>
+
+      {/* Background stars container */}
+      <div className="stars">
+        {Array.from({ length: 50 }).map((_, i) => (
+          <div
+            key={i}
+            className="star"
+            style={{
+              top: Math.random() * 100 + "vh",
+              left: Math.random() * 100 + "vw",
+              width: Math.random() * 3 + 1 + "px",
+              height: Math.random() * 3 + 1 + "px",
+              opacity: 0.2 + Math.random() * 0.8,
+              animationDuration: 1 + Math.random() * 2 + "s",
+            }}
+          ></div>
+        ))}
+      </div>
+
       <div className="detail-container">
         <h1>{template.title}</h1>
-        <img
-          src={template.image}
-          alt={template.title}
-          className="detail-img"
-        />
+        <img src={template.image} alt={template.title} className="detail-img" />
         <h2>Coming Soon!</h2>
-        <Link to="/shop" className="back-link">← Back to Shop</Link>
+        <Link to="/shop" className="back-link">
+          ← Back to Shop
+        </Link>
       </div>
     </div>
   );

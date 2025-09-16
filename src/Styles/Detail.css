@@ -1,4 +1,4 @@
-/* === Detail Page CSS with Responsive Fixes === */
+/* === Detail Page CSS with Optimized Stars, Moon, and Animations === */
 
 /* Detail Page Container */
 .detail-page .detail-container {
@@ -23,7 +23,7 @@
   opacity: 1;
 }
 
-/* Stars */
+/* === Background Stars === */
 .detail-page .stars {
   position: fixed;
   width: 100%;
@@ -33,47 +33,103 @@
   z-index: -2;
   pointer-events: none;
 }
+
 .detail-page .star {
   position: absolute;
   background: white;
   border-radius: 50%;
   opacity: 0.8;
   animation: twinkle 2s infinite alternate;
+  transform: translateZ(0);
+  will-change: opacity, transform;
 }
+
+.detail-page .star::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 6px white, 0 0 12px white;
+  opacity: 0.6;
+}
+
 @keyframes twinkle {
-  from { opacity: 0.3; transform: scale(0.8); }
+  from { opacity: 0.2; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1.2); }
 }
 
-/* Moon */
+/* === Crescent Moon === */
 .detail-page .moon {
   position: fixed;
   top: 2rem;
   right: 2rem;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: #fff9e6;
-  box-shadow: 0 0 25px 10px rgba(255, 245, 200, 0.6);
+  box-shadow: 0 0 15px 5px rgba(255, 245, 200, 0.5);
   z-index: -1;
   animation: floatMoon 4s ease-in-out infinite;
+  transform: translateZ(0);
+  will-change: transform;
 }
+
 .detail-page .moon::after {
   content: "";
   position: absolute;
   top: 0;
-  left: 30px;
+  left: 35px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #000;
-}
-@keyframes floatMoon {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  background: #000000; /* crescent cutout */
 }
 
-/* Template Image for Detail Page */
+@keyframes floatMoon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* === Falling Stars / Emojis === */
+.detail-page .falling-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+  will-change: transform;
+}
+
+.detail-page .star-emoji {
+  position: absolute;
+  top: -20px;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+  opacity: 0.9;
+  animation-name: fallEmoji;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+@keyframes fallEmoji {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* === Template Image for Detail Page === */
 .detail-page .detail-img {
   width: 100% !important;
   max-width: 800px !important;
@@ -89,7 +145,7 @@
   box-shadow: 0 0 35px #fba2cfaa;
 }
 
-/* Titles */
+/* === Titles === */
 .detail-page h1 {
   font-family: "Great Vibes", cursive;
   font-size: 2.8rem !important;
@@ -105,9 +161,9 @@
   margin-bottom: 2rem;
 }
 
-/* Back Link */
+/* === Back Link === */
 .detail-page .back-link {
-    display: inline-block;
+  display: inline-block;
   background: linear-gradient(90deg, #fa89c1, #fba2cf);
   color: white;
   font-family: "Caveat", cursive;
@@ -121,7 +177,7 @@
   box-shadow: 0 0 10px #fa89c1aa, 0 0 20px #fba2cfa0;
 }
 .detail-page .back-link:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 0 20px #fa89c1ff, 0 0 35px #fba2cfff;
   background: linear-gradient(90deg, #fba2cf, #fa89c1);
   color: #fff;

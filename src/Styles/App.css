@@ -4,6 +4,11 @@
 @import "./Shop.css";
 @import "./Detail.css";
 
+.animated-element {
+  will-change: transform, opacity;
+  backface-visibility: hidden; 
+}
+
 /* Main content starts invisible */
 .main-container {
   opacity: 0;
@@ -28,7 +33,7 @@ body {
 }
 
 
-/* Stars */
+/* === Optimized Stars === */
 .stars {
   position: fixed;
   width: 100%;
@@ -37,6 +42,8 @@ body {
   left: 0;
   background: transparent;
   z-index: -2;
+  pointer-events: none;
+  will-change: transform;
 }
 
 .star {
@@ -45,41 +52,13 @@ body {
   border-radius: 50%;
   opacity: 0.8;
   animation: twinkle 2s infinite alternate;
+  transform: translateZ(0); /* force GPU layer */
+  will-change: opacity, transform;
 }
 
 @keyframes twinkle {
   from { opacity: 0.3; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1.2); }
-}
-
-/* Crescent moon */
-.moon {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #fff9e6;
-  box-shadow: 0 0 25px 10px rgba(255, 245, 200, 0.6);
-  z-index: -1;
-  animation: floatMoon 4s ease-in-out infinite;
-}
-
-.moon::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 30px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #000000; /* cut out moon crescent */
-}
-
-@keyframes floatMoon {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  to { opacity: 1; transform: scale(1.1); } /* smaller scale to reduce repaint */
 }
 
 .star::before {
@@ -89,7 +68,76 @@ body {
   height: 100%;
   border-radius: 50%;
   background: white;
-  filter: blur(2px);
+  filter: blur(1px); /* lighter blur for performance */
+}
+
+/* === Optimized Crescent Moon === */
+.moon {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 120px; 
+  height: 120px;
+  border-radius: 50%;
+  background: #fff9e6;
+  box-shadow: 0 0 15px 5px rgba(255, 245, 200, 0.5); /* lighter shadow */
+  z-index: -1;
+  animation: floatMoon 4s ease-in-out infinite;
+  transform: translateZ(0); /* GPU acceleration */
+  will-change: transform;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 35px; 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #000000;
+}
+
+@keyframes floatMoon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* === Optimized Falling Stars / Emojis === */
+.falling-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+  will-change: transform;
+}
+
+.star-emoji {
+  position: absolute;
+  top: -20px;
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+  opacity: 0.9;
+  animation-name: fallEmoji;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+@keyframes fallEmoji {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
 
@@ -439,7 +487,7 @@ h2 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000; /* Black background */
+  background: #000;
   border-radius: 6px;
 }
 
