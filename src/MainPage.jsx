@@ -142,6 +142,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
             <a href="https://angyportal.love/" target="_blank" rel="noopener noreferrer">Angy Portal</a>
             <a href="https://lune.cards/" target="_blank" rel="noopener noreferrer">Moon & Cards</a>
             <a href="https://lacucinadishay.com/" target="_blank" rel="noopener noreferrer">Shay's Kitchen</a>
+            <a href="https://pathfinders-tale.com/" target="_blank" rel="noopener noreferrer">Pathfinder's Tale</a>
           </div>
         </div>
 
