@@ -3,6 +3,7 @@
 @import "./MediaPage.css";
 @import "./Shop.css";
 @import "./Detail.css";
+@import "./Navbar.css";
 
 .animated-element {
   will-change: transform, opacity;
@@ -302,6 +303,7 @@ h2 {
   border-radius: 16px;
   display: inline-block;
   cursor: url('../assets/pointer.png'), auto !important;
+  margin-bottom: 3rem;
 }
 
 /* === Projects === */

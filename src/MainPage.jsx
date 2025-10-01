@@ -96,7 +96,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
   return (
     <div className="container">
-      <div className="card">
+      <div className="card" id="top">
         <div className="falling-stars"></div>
         <img src={pfp} alt="profile" className="pfp" />
         <h1>Hi, I'm Shay ♡</h1>
@@ -128,13 +128,13 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
         <div className="pink-divider"></div>
 
         {/* === Template Shop Section Added Above Things I've Made === */}
-        <div className="template-shop-section">
+        <div className="template-shop-section" id="shop">
           <Link to="/shop" className="shop-link-button">💻 Visit My Template Shop</Link>
         </div>
 
         <div className="pink-divider"></div>
 
-        <div className="projects">
+        <div className="projects" id="projects">
           <h2>Things I've made ᝰ.ᐟ </h2>
           <div className="project-buttons">
             <a href="https://skindexanalyzer.com/" target="_blank" rel="noopener noreferrer">The Skindex</a>
@@ -148,13 +148,13 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
         <div className="pink-divider"></div>
 
-        <div className="media-section">
+        <div className="media-section" id="media">
           <Link to="/media" className="my-media-button">Click here for my Media</Link>
         </div>
 
         <div className="pink-divider"></div>
 
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" id="message" onSubmit={handleSubmit}>
           <label htmlFor="message">Send me a message💌ᯓ★</label>
           <textarea
             id="message"
