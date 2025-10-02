@@ -7,8 +7,8 @@ import template3 from "./assets/pasteltemp2.png";
 
 const templates = [
   { id: "1", title: "Gothic Eclipse Template", image: template1 },
-  { id: "2", title: "Pastel Template", image: template2 },
-  { id: "3", title: "Fantasy Template", image: template3 },
+  { id: "2", title: "Fantasy Template", image: template2 },
+  { id: "3", title: "Pastel Template", image: template3 },
 ];
 
 function TemplatesShop() {
