@@ -71,7 +71,7 @@
     top: auto;            
     bottom: 1rem;         
     left: 50%;            
-    transform: translateX(-50%);
+     transform: translate(-50%, 0);
     flex-direction: row;  
     padding: 0.4rem 1rem;
     border-radius: 40px;
