@@ -42,6 +42,10 @@
   color: #000; 
   background: #ffffff55; 
   box-shadow: 0 0 8px #ff6392aa;
+
+  text-decoration: none; 
+  border: none;           
+  outline: none;         
 }
 
 /* Hover effect */

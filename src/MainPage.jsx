@@ -135,7 +135,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
         <div className="pink-divider"></div>
 
         <div className="projects" id="projects">
-          <h2>Things I've made ᝰ.ᐟ </h2>
+          <h2>Things I've made✨.ᐟ </h2>
           <div className="project-buttons">
             <a href="https://skindexanalyzer.com/" target="_blank" rel="noopener noreferrer">The Skindex</a>
             <a href="https://myhappylittlejournal.com/" target="_blank" rel="noopener noreferrer">My Happy Lil Journal</a>
@@ -149,7 +149,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
         <div className="pink-divider"></div>
 
         <div className="media-section" id="media">
-          <Link to="/media" className="my-media-button">Click here for my Media</Link>
+          <Link to="/media" className="my-media-button">Click here for my Media🎬</Link>
         </div>
 
         <div className="pink-divider"></div>
@@ -159,7 +159,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
           <textarea
             id="message"
             name="message"
-            placeholder="write something sweet..."
+            placeholder="If you need a response back/support, please include a way for me to contact you. Otherwise, write something nice :)"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required

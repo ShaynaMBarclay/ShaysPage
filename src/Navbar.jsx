@@ -1,69 +1,48 @@
-import { Link as ScrollLink } from "react-scroll";
+import { scroller } from "react-scroll";
 
 function Navbar() {
+  const scrollToCenter = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const sectionHeight = section.offsetHeight;
+    const viewportHeight = window.innerHeight;
+    const scrollOffset =
+      section.getBoundingClientRect().top +
+      window.scrollY -
+      (viewportHeight / 2 - sectionHeight / 2);
+
+    window.scrollTo({
+      top: scrollOffset,
+      behavior: "smooth",
+    });
+  };
+
+  const links = [
+    { id: "top", emoji: "🏠" },
+    { id: "shop", emoji: "💻" },
+    { id: "projects", emoji: "✨" },
+    { id: "media", emoji: "🎬" },
+    { id: "message", emoji: "💌" },
+  ];
+
   return (
     <nav className="shays-navbar">
       <ul className="navbar-links">
-        <li>
-          <ScrollLink
-            to="top"
-            smooth={true}
-            duration={500}
-            offset={-50}
-            className="scroll-link"
-            activeClass="active"
-          >
-            🏠
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink
-            to="shop"
-            smooth={true}
-            duration={500}
-            offset={-50}
-            className="scroll-link"
-            activeClass="active"
-          >
-            💻
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink
-            to="projects"
-            smooth={true}
-            duration={500}
-            offset={-50}
-            className="scroll-link"
-            activeClass="active"
-          >
-            ✨
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink
-            to="media"
-            smooth={true}
-            duration={500}
-            offset={-50}
-            className="scroll-link"
-            activeClass="active"
-          >
-            🎬
-          </ScrollLink>
-        </li>
-        <li>
-          <ScrollLink
-            to="message"
-            smooth={true}
-            duration={500}
-            offset={-50}
-            className="scroll-link"
-            activeClass="active"
-          >
-            💌
-          </ScrollLink>
-        </li>
+        {links.map((link) => (
+          <li key={link.id}>
+            <a
+              href={`#${link.id}`}
+              className="scroll-link"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToCenter(link.id);
+              }}
+            >
+              {link.emoji}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

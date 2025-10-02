@@ -113,6 +113,41 @@ function TemplateDetail() {
           💖 Buy Now
         </a>
 
+        <div className="refund-policy">
+  <h2>Refund Policy</h2>
+  <p>
+    Thank you for supporting my shop! Please read my refund policy carefully before making a purchase.
+  </p>
+
+  <h3>Digital Products</h3>
+  <p>
+    All items in this shop are digital downloads. Because digital files cannot be “returned” once downloaded, all sales are final and non-refundable.
+  </p>
+
+  <h3>Accidental Purchases / Duplicate Orders</h3>
+  <p>
+    If you purchased the same item more than once by mistake, please contact me within 48 hours of purchase. I’ll be happy to issue a refund for duplicate orders.
+  </p>
+
+  <h3>File Issues</h3>
+  <p>
+    If you experience problems accessing or opening your files, please reach out to me at <strong>[your email/contact info]</strong>. I’ll gladly help you resolve the issue and make sure you receive your templates.
+  </p>
+
+  <h3>Exceptions</h3>
+  <p>Refunds may be considered on a case-by-case basis only if:</p>
+  <ul>
+    <li>You never downloaded the files, and</li>
+    <li>You contact me within 7 days of purchase.</li>
+  </ul>
+
+  <h3>Support</h3>
+  <p>
+    I want you to be happy with your purchase! If you need assistance customizing or using your template, please feel free to reach out on the homepage in the send me a message section. Please note that I can only respond as long as you provide a contact such as email, Twitter/ Tik Tok/ Instagram or Discord handle. I’ll do my best to help.
+  </p>
+</div>
+
+
         {/* Back button */}
         <Link to="/shop" className="back-link">
           ← Back to Shop
