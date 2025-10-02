@@ -44,7 +44,7 @@ body {
   background: transparent;
   pointer-events: none;
   will-change: transform;
-  z-index: 0;
+  z-index: -2;
 }
 
 .star {
