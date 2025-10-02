@@ -31,7 +31,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
   // Falling stars/kaomojis inside the card
   useEffect(() => {
     const starContainer = document.querySelector('.falling-stars');
-    const emojis = ['★', '☆', '♡', '✧', '✩'];
+    const emojis = ['★', '☆', '✧', '✩'];
 
     const createStar = () => {
       const star = document.createElement('div');
@@ -39,12 +39,12 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
       star.textContent = emojis[Math.floor(Math.random() * emojis.length)];
       star.style.left = `${Math.random() * 100}%`;
       star.style.fontSize = `${Math.random() * 20 + 10}px`;
-      star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      star.style.animationDuration = `${Math.random() * 4 + 5}s`;
       starContainer.appendChild(star);
       setTimeout(() => star.remove(), 5000);
     };
 
-    const interval = setInterval(createStar, 400);
+    const interval = setInterval(createStar, 600);
     return () => clearInterval(interval);
   }, []);
 
@@ -54,7 +54,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
     starsContainer.className = 'stars';
     document.body.appendChild(starsContainer);
 
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 100; i++) {
       const star = document.createElement('div');
       star.className = 'star';
       const size = Math.random() * 3 + 1 + 'px';

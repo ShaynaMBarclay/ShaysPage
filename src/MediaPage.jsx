@@ -10,7 +10,7 @@ function MediaPage() {
     starsContainer.className = 'stars';
     document.body.appendChild(starsContainer);
 
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 100; i++) {
       const star = document.createElement('div');
       star.className = 'star';
       const size = Math.random() * 3 + 1 + 'px';

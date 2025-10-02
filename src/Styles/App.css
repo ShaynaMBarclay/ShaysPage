@@ -42,7 +42,6 @@ body {
   top: 0;
   left: 0;
   background: transparent;
-  z-index: -2;
   pointer-events: none;
   will-change: transform;
 }
@@ -59,7 +58,7 @@ body {
 
 @keyframes twinkle {
   from { opacity: 0.3; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1.1); } /* smaller scale to reduce repaint */
+  to { opacity: 1; transform: scale(1.1); } 
 }
 
 .star::before {
@@ -82,10 +81,13 @@ body {
   border-radius: 50%;
   background: #fff9e6;
   box-shadow: 0 0 15px 5px rgba(255, 245, 200, 0.5); /* lighter shadow */
-  z-index: -1;
   animation: floatMoon 4s ease-in-out infinite;
   transform: translateZ(0); /* GPU acceleration */
   will-change: transform;
+}
+
+.stars, .moon {
+  z-index: 0;
 }
 
 .moon::after {
@@ -113,7 +115,7 @@ body {
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 0;
+  z-index: 0.5;
   will-change: transform;
 }
 
@@ -189,7 +191,7 @@ h1, h2 {
 /* === Card & Profile === */
 .card {
   position: relative; 
-  background-color: #ffffff50;
+  background-color: rgba(255,255,255,0.3);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -202,6 +204,10 @@ h1, h2 {
   box-shadow: 0 0 15px rgba(255, 182, 217, 0.4);
   max-width: 700px;
   margin: auto;
+  z-index: 1;
+  position: relative;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
 }
 
 .pfp {
