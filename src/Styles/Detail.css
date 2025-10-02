@@ -175,6 +175,10 @@
   font-size: 1.7rem !important;
 }
 
+.custom-cursor-link {
+  cursor: url('../assets/pointer.png'), auto;
+}
+
 
 /* === Responsive === */
 @media (max-width: 768px) {

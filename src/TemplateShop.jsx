@@ -47,7 +47,15 @@ function TemplatesShop() {
         </div>
 
         <h1>Templates Shop</h1>
-        <p>Click on a template to view details. The shop is still in the works. More templates and detailed template descriptions, including images, screen recordings, live demo links, and tutorials will be added soon!</p>
+        <p>
+          Click on a template to view more details! If you have any questions or need support, please send me a message on the main page, and include your contact information. Please refer to the{" "}
+           <Link to="/shop/1#refund-policy"
+           className="custom-cursor-link"
+            style={{ color: "#ff6392", textDecoration: "underline" }}>
+             refund policy
+          </Link>{" "}
+          before making any purchases.
+          </p>
 
         <div className="template-grid">
           {templates.map((template) => (

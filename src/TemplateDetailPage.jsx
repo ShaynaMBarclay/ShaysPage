@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams, Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, Link, useLocation } from "react-router-dom";
 import gothtemp from "./assets/gothtemp1.png";
 import gothtemp2 from "./assets/gothtemp2.png";
 import fantasytemp1 from "./assets/fantasytemp1.png";
@@ -46,6 +46,18 @@ const templates = [
 function TemplateDetail() {
   const { id } = useParams();
   const template = templates.find((t) => t.id === id);
+  const { hash } = useLocation();
+
+  
+  // Scroll to section if hash exists
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
 
   if (!template) return <p>Template not found</p>;
 
@@ -113,7 +125,7 @@ function TemplateDetail() {
           💖 Buy Now
         </a>
 
-        <div className="refund-policy">
+        <div className="refund-policy" id="refund-policy">
   <h2>Refund Policy</h2>
   <p>
     Thank you for supporting my shop! Please read my refund policy carefully before making a purchase.
