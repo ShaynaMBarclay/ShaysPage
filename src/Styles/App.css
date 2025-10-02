@@ -44,6 +44,7 @@ body {
   background: transparent;
   pointer-events: none;
   will-change: transform;
+  z-index: 0;
 }
 
 .star {
@@ -84,11 +85,9 @@ body {
   animation: floatMoon 4s ease-in-out infinite;
   transform: translateZ(0); /* GPU acceleration */
   will-change: transform;
+  z-index: -1;
 }
 
-.stars, .moon {
-  z-index: 0;
-}
 
 .moon::after {
   content: "";
