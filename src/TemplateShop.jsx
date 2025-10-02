@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import template1 from "./assets/goth.png";
-import template2 from "./assets/pasteltemplate.png";
-import template3 from "./assets/fantasy.png";
+import template1 from "./assets/gothtemp2.png";
+import template2 from "./assets/fantasytemp1.png";
+import template3 from "./assets/pasteltemp2.png";
 
 const templates = [
-  { id: "1", title: "Gothic Solar Eclipse Template", image: template1 },
+  { id: "1", title: "Gothic Eclipse Template", image: template1 },
   { id: "2", title: "Pastel Template", image: template2 },
   { id: "3", title: "Fantasy Template", image: template3 },
 ];

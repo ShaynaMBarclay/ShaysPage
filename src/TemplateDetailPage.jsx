@@ -1,13 +1,46 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import template1 from "./assets/goth.png";
-import template2 from "./assets/pasteltemplate.png";
-import template3 from "./assets/fantasy.png";
+import gothtemp from "./assets/gothtemp1.png";
+import gothtemp2 from "./assets/gothtemp2.png";
+import fantasytemp1 from "./assets/fantasytemp1.png";
+import fantasytemp2 from "./assets/fantasytemp2.png";
+import pasteltemp1 from "./assets/pasteltemp1.png";
+import pasteltemp2 from "./assets/pasteltemp2.png";
 
 const templates = [
-  { id: "1", title: "Gothic Solar Eclipse Template", image: template1 },
-  { id: "2", title: "PastelTemplate", image: template2 },
-  { id: "3", title: "Fantasy Template", image: template3 },
+  {
+    id: "1",
+    title: "Gothic Eclipse Template",
+    images: [
+      { src: gothtemp, orientation: "landscape" },
+      { src: gothtemp2, orientation: "portrait" },
+    ],
+    bio: "Gothic Red and Black link in bio style template with an Eclipse in the background, blood rain effect, red cursor, and custom animations for that gothic feel. Customizable with detailed instructions on how to edit. A dark, elegant gothic-inspired aesthetic. Perfect for creators who love moody vibes and sharp contrasts. Responsive and customizable.",
+    demoLink: "https://shaysescape.netlify.app/",
+    buyLink: "https://ko-fi.com/s/e0eb3902fc",
+  },
+  {
+    id: "2",
+    title: "Fantasy Template",
+    images: [
+      { src: fantasytemp1, orientation: "portrait" },
+      { src: fantasytemp2, orientation: "landscape" },
+    ],
+    bio: "Fantasy inspired link in bio style template with a color changing background with sparkles, glowing magical book animation, cute custom cursor, and custom animations. Enchanting, fantasy-inspired, with whimsical typography and layered visuals. Great for storytellers, artists, and creators.",
+    demoLink: "https://sylvariaes-realm.netlify.app/",
+    buyLink: "https://ko-fi.com/s/f47ad74939",
+  },
+  {
+    id: "3",
+    title: "Pastel Template",
+    images: [
+      { src: pasteltemp1, orientation: "landscape" },
+      { src: pasteltemp2, orientation: "portrait" },
+    ],
+    bio: "A Pastel link in bio Template with a cute, pastel design, including a crescent moon and stars animation, floating hearts, cute shiny pastel buttons, and a custom cursor. All customizable. Soft, pastel-colored, designed with an airy and friendly aesthetic. Ideal for personal blogs or portfolio websites.",
+    demoLink: "https://sylvs-star.netlify.app/",
+    buyLink: "https://ko-fi.com/s/fe15753ef1",
+  },
 ];
 
 function TemplateDetail() {
@@ -21,7 +54,7 @@ function TemplateDetail() {
       {/* Moon */}
       <div className="moon"></div>
 
-      {/* Background stars container */}
+      {/* Stars */}
       <div className="stars">
         {Array.from({ length: 50 }).map((_, i) => (
           <div
@@ -41,8 +74,46 @@ function TemplateDetail() {
 
       <div className="detail-container">
         <h1>{template.title}</h1>
-        <img src={template.image} alt={template.title} className="detail-img" />
-        <h2>Coming Soon!</h2>
+
+        {/* Bio */}
+        <p className="template-bio">{template.bio}</p>
+
+        {/* Links */}
+        <a
+          href={template.demoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="demo-link"
+        >
+          🔗 View example Site
+        </a>
+
+
+        {/* Gallery of images */}
+        <div className="image-gallery">
+          {template.images.map((img, idx) => (
+            <div className="image-item" key={idx}>
+              <img
+                src={img.src}
+                alt={`${template.title} preview ${idx + 1}`}
+                className={`detail-img ${
+                  img.orientation === "portrait" ? "portrait" : "landscape"
+                }`}
+              />
+            </div>
+          ))}
+        </div>
+
+        <a
+          href={template.buyLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="buy-btn"
+        >
+          💖 Buy Now
+        </a>
+
+        {/* Back button */}
         <Link to="/shop" className="back-link">
           ← Back to Shop
         </Link>
