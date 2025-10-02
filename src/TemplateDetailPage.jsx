@@ -143,7 +143,7 @@ function TemplateDetail() {
 
   <h3>File Issues</h3>
   <p>
-    If you experience problems accessing or opening your files, please reach out to me at <strong>[your email/contact info]</strong>. I’ll gladly help you resolve the issue and make sure you receive your templates.
+    If you experience problems accessing or opening your files, please reach out to me via the main page. I’ll gladly help you resolve the issue and make sure you receive your templates.
   </p>
 
   <h3>Exceptions</h3>
