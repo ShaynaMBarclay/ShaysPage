@@ -19,11 +19,12 @@ function Navbar() {
   };
 
   const links = [
-    { id: "socials", emoji: "📱" },
+    { id: "socials", emoji: "💗" },
     { id: "shop", emoji: "💻" },
     { id: "projects", emoji: "✨" },
     { id: "media", emoji: "🎬" },
     { id: "message", emoji: "💌" },
+    { id: "music", emoji: "🎶"}
   ];
 
   return (

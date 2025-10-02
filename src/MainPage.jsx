@@ -104,13 +104,13 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
         <div className="about-container">
           <div className="socials" id="socials">
             <a href="https://x.com/sylvariae" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <FaTwitter />
+             💗<FaTwitter />
             </a>
             <a href="https://www.instagram.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <FaInstagram />
+              💗<FaInstagram />
             </a>
             <a href="https://www.tiktok.com/@sylvariae" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-              <FaTiktok />
+              💗<FaTiktok />
             </a>
           </div>
 
@@ -169,7 +169,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
         <div className="pink-divider"></div>
 
-        <div className="songs">
+        <div className="songs" id="music" >
           <h2>─•──── 𖦤</h2>
           <div className="embed">
             <iframe
