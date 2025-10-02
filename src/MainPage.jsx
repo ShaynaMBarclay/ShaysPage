@@ -96,13 +96,13 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
 
   return (
     <div className="container">
-      <div className="card" id="top">
+      <div className="card">
         <div className="falling-stars"></div>
         <img src={pfp} alt="profile" className="pfp" />
         <h1>Hi, I'm Shay ♡</h1>
 
         <div className="about-container">
-          <div className="socials">
+          <div className="socials" id="socials">
             <a href="https://x.com/sylvariae" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FaTwitter />
             </a>

@@ -19,7 +19,7 @@ function Navbar() {
   };
 
   const links = [
-    { id: "top", emoji: "🏠" },
+    { id: "socials", emoji: "📱" },
     { id: "shop", emoji: "💻" },
     { id: "projects", emoji: "✨" },
     { id: "media", emoji: "🎬" },
