@@ -218,6 +218,39 @@ p {
   cursor: url('../assets/pointer.png'), auto !important;
 }
 
+.custom-link-bio {
+  margin: 2.5rem 0; 
+  text-align: center;
+}
+
+.custom-bio-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-family: "Caveat", cursive;
+  color: white !important;
+  background: linear-gradient(135deg, #ffdce6, #fd7ba9);
+  border: none;
+  border-radius: 50px;
+  border: 2px solid #ffb6d9;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fa89c1aa, 0 0 20px #fba2cfa0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  cursor: url('../assets/pointer.png'), auto !important;
+}
+
+.custom-bio-button:hover {
+  transform: scale(1.05);
+  color: white;
+  box-shadow: 0 0 20px #fa89c1ff, 0 0 35px #fba2cfff;
+  background: linear-gradient(135deg, #fd7ba9, #ffdce6);
+  cursor: url('../assets/pointer.png'), auto !important;
+}
+
+
+
 /* === Responsive adjustments === */
 
 
@@ -248,6 +281,16 @@ p {
   .shop-link-button, .return-main-button {
     font-size: 1.2rem !important;
     padding: 0.5rem 1.2rem !important;
+  }
+
+   .custom-bio-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 40px;
+  }
+
+  .custom-link-bio {
+    margin: 1.5rem 0;
   }
 }
 

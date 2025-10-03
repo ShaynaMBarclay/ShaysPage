@@ -1,6 +1,6 @@
 import './Styles/App.css';
 import pfp from './assets/gifpfp.gif';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";  
 import { useState, useEffect } from 'react';
@@ -16,6 +16,18 @@ I love romance animes,
 fantasy books & RPGs. 
 I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
   const [typedText, setTypedText] = useState("");
+
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const element = document.querySelector(location.hash);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+}, [location]);
+
 
   // Typing effect
   useEffect(() => {

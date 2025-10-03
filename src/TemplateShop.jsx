@@ -57,6 +57,18 @@ function TemplatesShop() {
           before making any purchases.
           </p>
 
+          {/* === Custom Link-in-Bio Section === */}
+            <div className="custom-link-bio">
+             <p>Looking for something unique? Please include a contact as well as details about your idea! I will get back to you soon.</p>
+               <Link 
+               to="/#message"
+               className="custom-bio-button"
+               style={{ color: "#ff6392", textDecoration: "underline", fontWeight: "bold" }}
+                >
+                Request a custom Link-in-Bio site ✨
+               </Link>
+               </div>
+
         <div className="template-grid">
           {templates.map((template) => (
             <Link
