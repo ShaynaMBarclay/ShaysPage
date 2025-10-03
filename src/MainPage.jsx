@@ -40,25 +40,27 @@ useEffect(() => {
     return () => clearInterval(interval);
   }, []);
 
-  // Falling stars/kaomojis inside the card
-  useEffect(() => {
-    const starContainer = document.querySelector('.falling-stars');
-    const emojis = ['★', '☆', '✧', '✩'];
+  // Glittering stars inside the card
+useEffect(() => {
+  const starContainer = document.querySelector('.falling-stars');
+  const emojis = ['★', '☆', '★', '✮', '★', '✮'];
 
-    const createStar = () => {
-      const star = document.createElement('div');
-      star.classList.add('star-emoji');
-      star.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-      star.style.left = `${Math.random() * 100}%`;
-      star.style.fontSize = `${Math.random() * 20 + 10}px`;
-      star.style.animationDuration = `${Math.random() * 4 + 5}s`;
-      starContainer.appendChild(star);
-      setTimeout(() => star.remove(), 5000);
-    };
+  const createStar = () => {
+    const star = document.createElement('div');
+    star.classList.add('star-emoji');
+    star.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    star.style.left = `${Math.random() * 100}%`;
+    star.style.top = `${Math.random() * 100}%`; 
+    star.style.fontSize = `${Math.random() * 20 + 10}px`;
+    starContainer.appendChild(star);
 
-    const interval = setInterval(createStar, 600);
-    return () => clearInterval(interval);
-  }, []);
+    // Remove after animation ends
+    setTimeout(() => star.remove(), 4000);
+  };
+
+  const interval = setInterval(createStar, 300); 
+  return () => clearInterval(interval);
+}, []);
 
   // Background stars & moon
   useEffect(() => {

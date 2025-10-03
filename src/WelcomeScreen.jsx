@@ -16,7 +16,7 @@ export default function WelcomeScreen({ onEnter }) {
       <div className="white-eclipse"></div>
 
       {/* Welcome Text */}
-      <p className="welcome-text">♡ Click to enter ♡</p>
+      <p className="welcome-text"> ★ Click to enter  ★</p>
     </div>
   );
 }

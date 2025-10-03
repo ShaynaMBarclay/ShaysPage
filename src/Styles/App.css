@@ -105,42 +105,36 @@ body {
   50% { transform: translateY(-8px); }
 }
 
-/* === Optimized Falling Stars / Emojis === */
+/* Glittering stars */
 .falling-stars {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 0.5;
-  will-change: transform;
+  z-index: 0; 
 }
 
 .star-emoji {
   position: absolute;
-  top: -20px;
-  font-size: 1.2rem;
-  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
-  opacity: 0.9;
-  animation-name: fallEmoji;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  transform: translateZ(0);
-  will-change: transform, opacity;
+  color: white;
+  text-shadow: 
+    0 0 5px white,
+    0 0 10px pink,
+    0 0 20px violet;
+  opacity: 0;
+  animation: sparkleEmoji 4s ease-in-out forwards;
 }
 
-@keyframes fallEmoji {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
+/* Twinkle / sparkle effect */
+@keyframes sparkleEmoji {
+  0%   { opacity: 0; transform: scale(0.5) rotate(0deg); text-shadow: 0 0 5px white, 0 0 10px pink, 0 0 20px violet, 0 0 40px white; }
+  25%  { opacity: 1; transform: scale(1.5) rotate(15deg); text-shadow: 0 0 10px white, 0 0 20px pink, 0 0 30px violet, 0 0 60px white; }
+  50%  { opacity: 0.9; transform: scale(1.2) rotate(-10deg); text-shadow: 0 0 7px white, 0 0 15px pink, 0 0 25px violet, 0 0 50px white; }
+  75%  { opacity: 1; transform: scale(1.4) rotate(10deg); text-shadow: 0 0 12px white, 0 0 25px pink, 0 0 35px violet, 0 0 70px white; }
+  100% { opacity: 0; transform: scale(0.6) rotate(0deg); text-shadow: 0 0 5px white, 0 0 10px pink, 0 0 20px violet; }
 }
+
+
 
 
 .container {
@@ -445,47 +439,6 @@ h2 {
   box-shadow: 0 0 8px #ff6392aa; 
 }
 
-/* === Falling Stars === */
-
-.falling-stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0; 
-}
-
-.star-emoji {
-  position: absolute;
-  top: -20px;
-  animation-name: fallEmoji;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-
-  color: white; 
-  font-size: 1.2rem;
-  text-shadow: 
-    0 0 5px white,
-    0 0 10px white,
-    0 0 15px white,
-    0 0 20px white;
-  opacity: 0.9;
-}
-
-
-@keyframes fallEmoji {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg); 
-    opacity: 0;
-  }
-}
 
 /* === Scrollbar === */
 ::-webkit-scrollbar {
