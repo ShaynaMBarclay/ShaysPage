@@ -46,8 +46,11 @@ function TemplatesShop() {
           <Link to="/" className="return-main-button">← Return to Main Page</Link>
         </div>
 
-        <h1>Templates Shop</h1>
-        <p>
+        <h1>Templates Shop Currently: Closed</h1>
+        <p style={{ color: 'red' }}>
+
+          The Shop is being updated! Soon, each template will have a code-free version that’s easy to customize. While these won’t have as many options as the fully codeable versions, they’re perfect for a simple, hassle-free experience. Coming soon!</p>
+        {/*<p>
           Click on a template to view more details! If you have any questions or need support, please send me a message on the main page, and include your contact information. Please refer to the{" "}
            <Link to="/shop/1#refund-policy"
            className="custom-cursor-link"
@@ -55,7 +58,7 @@ function TemplatesShop() {
              refund policy
           </Link>{" "}
           before making any purchases.
-          </p>
+          </p>*/}
 
           {/* === Custom Link-in-Bio Section === */}
             <div className="custom-link-bio">
