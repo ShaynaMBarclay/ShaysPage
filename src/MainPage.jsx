@@ -97,7 +97,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
       return;
     }
 
-    alert("Messaging is temporarily closed 💌 Please check back soon! And to the one harassing me, may you find peace (and maybe a nice patch of grass) 💕");
+    alert("Messaging is temporarily closed 💌 Please check back soon, or message me on Twitter @Sylvariae for help. And to the one harassing me, may you find peace (and maybe a nice patch of grass) 💕");
 
     //fetch("https://formspree.io/f/mldlbeda", {
       //method: "POST",
