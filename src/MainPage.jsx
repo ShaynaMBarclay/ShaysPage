@@ -2,7 +2,7 @@ import './Styles/App.css';
 import pfp from './assets/gifpfp.gif';
 import { Link, useLocation } from 'react-router-dom';
 import { FaTwitter, FaInstagram } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa6";
+import { FaTiktok, FaPinterest } from "react-icons/fa6";
 import { useState, useEffect } from 'react';
 
 function MainPage() {
@@ -134,6 +134,9 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
             </a>
             <a href="https://www.tiktok.com/@sylvariae" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               💗<FaTiktok />
+            </a>
+            <a href="https://www.pinterest.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              💗<FaPinterest />
             </a>
           </div>
 
