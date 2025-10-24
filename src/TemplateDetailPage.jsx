@@ -28,7 +28,7 @@ const templates = [
       { src: gothtemp5, orientation: "landscape" },
       { src: gothtemp6, orientation: "landscape" },
     ],
-    bio: "Gothic Red and Black link in bio style template with an Eclipse in the background, blood rain effect, red cursor, and custom animations for that gothic feel. Customizable with detailed instructions on how to edit. A dark, elegant gothic-inspired aesthetic. Perfect for creators who love moody vibes and sharp contrasts. Responsive and customizable.",
+    bio: "Gothic Red and Black link in bio style template with an animated blood moon to eclipse in the background, blood rain into a blood puddle on the bottom of the screen effect, red cursor, and custom animations for that gothic feel. Customizable in site with detailed instructions on how to deploy and post online for your very own website! A dark, elegant gothic-inspired aesthetic. Perfect for creators who love moody vibes and sharp contrasts. Responsive and customizable.",
     demoLink: "https://shaysescape.netlify.app/",
     buyLink: "https://ko-fi.com/s/e0eb3902fc",
     tutorialLink: "https://www.youtube.com/watch?v=2yer6IxDFNw",
@@ -43,7 +43,7 @@ const templates = [
       { src: fantasytemp4, orientation: "landscape" },
       { src: fantasytemp5, orientation: "landscape" },
     ],
-    bio: "Fantasy inspired link in bio style template with a color changing background with sparkles, glowing magical book animation, cute custom cursor, and custom animations. Enchanting, fantasy-inspired, with whimsical typography and layered visuals. Great for storytellers, artists, and creators.",
+    bio: "Magical Fantasy inspired link in bio style template with a color changing background with sparkles, glowing magical book animation, cute custom cursor, and custom animations. Enchanting, fantasy-inspired, with whimsical fonts and layered visuals. Great for storytellers, artists, and creators. Comes with in site editor and instructions on how to deploy online for your very own website!",
     demoLink: "https://sylvariaes-realm.netlify.app/",
     buyLink: "https://ko-fi.com/s/f47ad74939",
     tutorialLink: "https://www.youtube.com/watch?v=2yer6IxDFNw",
@@ -57,7 +57,7 @@ const templates = [
       { src: pasteltemp3, orientation: "landscape" },
       { src: pasteltemp4, orientation: "landscape" },
     ],
-    bio: "A Pastel link in bio Template with a cute, pastel design, including a crescent moon and stars animation, floating hearts, cute shiny pastel buttons, and a custom cursor. All customizable. Soft, pastel-colored, designed with an airy and friendly aesthetic. Ideal for personal blogs or portfolio websites.",
+    bio: "A Dreamy Pastel link in bio Template with a cute, pastel design, including multi colored stars animation in the background, floating hearts, cute shiny pastel buttons, and a custom cursor. All customizable. Soft, pastel-colored, designed with an airy and friendly aesthetic. Ideal for personal blogs or portfolio websites, content creators, and anyone who loves to dream in a land of color. Comes with the in site editor and detailed instructions on how to deploy online for your very own website!",
     demoLink: "https://sylvs-star.netlify.app/",
     buyLink: "https://ko-fi.com/s/fe15753ef1",
     tutorialLink: "https://www.youtube.com/watch?v=2yer6IxDFNw",
@@ -68,6 +68,10 @@ function TemplateDetail() {
   const { id } = useParams();
   const template = templates.find((t) => t.id === id);
   const { hash } = useLocation();
+
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [id]);
 
   useEffect(() => {
     if (hash) {
