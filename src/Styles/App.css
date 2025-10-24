@@ -445,7 +445,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 1.3rem 2.2rem;
+  padding: 1.1rem 0.8rem !important;
   background-color: #ff009d15;
   color: #ff6392;
   font-weight: 600;
