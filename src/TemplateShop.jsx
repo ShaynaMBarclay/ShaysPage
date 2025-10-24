@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import template1 from "./assets/gothtemp2.png";
-import template2 from "./assets/fantasytemp1.png";
-import template3 from "./assets/pasteltemp2.png";
+import template1 from "./assets/bloodmoon1.png";
+import template2 from "./assets/updatedfantasy1.png";
+import template3 from "./assets/updatedpastel1.png";
 
 const templates = [
-  { id: "1", title: "Gothic Eclipse Template", image: template1 },
-  { id: "2", title: "Fantasy Template", image: template2 },
-  { id: "3", title: "Pastel Template", image: template3 },
+  { id: "1", title: "Blood Moon/Eclipse Template", image: template1 },
+  { id: "2", title: "Magical Fantasy Template", image: template2 },
+  { id: "3", title: "Dreamy and Pastel Template", image: template3 },
 ];
 
 function TemplatesShop() {

@@ -1,19 +1,32 @@
 import React, { useEffect } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
-import gothtemp from "./assets/gothtemp1.png";
-import gothtemp2 from "./assets/gothtemp2.png";
-import fantasytemp1 from "./assets/fantasytemp1.png";
-import fantasytemp2 from "./assets/fantasytemp2.png";
-import pasteltemp1 from "./assets/pasteltemp1.png";
-import pasteltemp2 from "./assets/pasteltemp2.png";
+import gothtemp from "./assets/bloodmoon1.png";
+import gothtemp2 from "./assets/bloodmoon2.png";
+import gothtemp3 from "./assets/bloodmoon3.png";
+import gothtemp4 from "./assets/bloodmoon4.png";
+import gothtemp5 from "./assets/bloodmoon5.png";
+import gothtemp6 from "./assets/bloodmoon6.png";
+import fantasytemp1 from "./assets/updatedfantasy1.png";
+import fantasytemp2 from "./assets/updatedfantasy2.png";
+import fantasytemp3 from "./assets/updatedfantasy3.png";
+import fantasytemp4 from "./assets/updatedfantasy4.png";
+import fantasytemp5 from "./assets/updatedfantasy5.png";
+import pasteltemp1 from "./assets/updatedpastel1.png";
+import pasteltemp2 from "./assets/updatedpastel2.png";
+import pasteltemp3 from "./assets/updatedpastel3.png";
+import pasteltemp4 from "./assets/updatedpastel4.png";
 
 const templates = [
   {
     id: "1",
-    title: "Gothic Eclipse Template",
+    title: "Blood Moon/Eclipse Template",
     images: [
+      { src: gothtemp3, orientation: "landscape" },
       { src: gothtemp, orientation: "landscape" },
-      { src: gothtemp2, orientation: "portrait" },
+      { src: gothtemp2, orientation: "landscape" },
+      { src: gothtemp4, orientation: "landscape" },
+      { src: gothtemp5, orientation: "landscape" },
+      { src: gothtemp6, orientation: "landscape" },
     ],
     bio: "Gothic Red and Black link in bio style template with an Eclipse in the background, blood rain effect, red cursor, and custom animations for that gothic feel. Customizable with detailed instructions on how to edit. A dark, elegant gothic-inspired aesthetic. Perfect for creators who love moody vibes and sharp contrasts. Responsive and customizable.",
     demoLink: "https://shaysescape.netlify.app/",
@@ -22,10 +35,13 @@ const templates = [
   },
   {
     id: "2",
-    title: "Fantasy Template",
+    title: "Magical Fantasy Template",
     images: [
-      { src: fantasytemp1, orientation: "portrait" },
+      { src: fantasytemp1, orientation: "landscape" },
       { src: fantasytemp2, orientation: "landscape" },
+      { src: fantasytemp3, orientation: "landscape" },
+      { src: fantasytemp4, orientation: "landscape" },
+      { src: fantasytemp5, orientation: "landscape" },
     ],
     bio: "Fantasy inspired link in bio style template with a color changing background with sparkles, glowing magical book animation, cute custom cursor, and custom animations. Enchanting, fantasy-inspired, with whimsical typography and layered visuals. Great for storytellers, artists, and creators.",
     demoLink: "https://sylvariaes-realm.netlify.app/",
@@ -34,10 +50,12 @@ const templates = [
   },
   {
     id: "3",
-    title: "Pastel Template",
+    title: "Dreamy and Pastel Template",
     images: [
       { src: pasteltemp1, orientation: "landscape" },
-      { src: pasteltemp2, orientation: "portrait" },
+      { src: pasteltemp2, orientation: "landscape" },
+      { src: pasteltemp3, orientation: "landscape" },
+      { src: pasteltemp4, orientation: "landscape" },
     ],
     bio: "A Pastel link in bio Template with a cute, pastel design, including a crescent moon and stars animation, floating hearts, cute shiny pastel buttons, and a custom cursor. All customizable. Soft, pastel-colored, designed with an airy and friendly aesthetic. Ideal for personal blogs or portfolio websites.",
     demoLink: "https://sylvs-star.netlify.app/",
