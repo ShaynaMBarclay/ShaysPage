@@ -17,29 +17,28 @@ function MainPage() {
 I love romance animes, 
 fantasy books & RPGs. 
 I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
-  const [typedText, setTypedText] = useState("");
 
-  const location = useLocation();
+const location = useLocation();
 
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+useEffect(() => {
+  if (location.hash) {
+    const element = document.querySelector(location.hash);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }, [location]);
+  }
+}, [location]);
 
   // Typing effect
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setTypedText((prev) => prev + fullText.charAt(index));
-      index++;
-      if (index === fullText.length) clearInterval(interval);
-    }, 100);
-    return () => clearInterval(interval);
-  }, []);
+ // useEffect(() => {
+    //let index = 0;
+    //const interval = setInterval(() => {
+     // setTypedText((prev) => prev + fullText.charAt(index));
+     // index++;
+    //  if (index === fullText.length) clearInterval(interval);
+  //  }, 100);
+   // return () => clearInterval(interval);
+ // }, []);
 
   // Glittering stars inside the card
   useEffect(() => {
@@ -140,17 +139,9 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
             </a>
           </div>
 
-          <p
-            style={{
-              whiteSpace: "pre-line",
-              fontFamily: '"Caveat", cursive',
-              fontSize: "1.7rem",
-              letterSpacing: "0.15em",
-              textAlign: "center",
-            }}
-          >
-            {typedText}
-          </p>
+         <p className="bio-glow">
+          {fullText}
+         </p>
         </div>
 
         <div className="pink-divider"></div>
