@@ -132,7 +132,7 @@ I'm a tech girly too ๋࣭ ⭑✮💻₊ ⊹ `;
             <a href="https://www.instagram.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               💗<FaInstagram />
             </a>
-            <a href="https://www.tiktok.com/@sylvariae" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@shaydotexe" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               💗<FaTiktok />
             </a>
             <a href="https://www.pinterest.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
