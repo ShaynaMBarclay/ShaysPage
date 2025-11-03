@@ -229,6 +229,20 @@
 
 
 /* === Responsive === */
+
+@media (max-width: 768px) {
+  .editor-btn {
+    font-size: 1.4rem !important; 
+    padding: 0.6rem 1.2rem; 
+    border-width: 2px; 
+  }
+
+  .editor-btn:hover {
+    transform: scale(1.05); 
+  }
+}
+
+
 @media (max-width: 768px) {
   .detail-page h1 {
     font-size: 2.2rem;

@@ -113,7 +113,7 @@ function TemplateDetail() {
             rel="noopener noreferrer"
             className="editor-btn"
           >
-            ✏️ Open Template Editor
+          Open Template Editor
           </a>
         )}
 
@@ -127,7 +127,7 @@ function TemplateDetail() {
           rel="noopener noreferrer"
           className="demo-link"
         >
-          🔗 View Example Site
+         View Example Site
         </a>
 
         {/* Gallery */}

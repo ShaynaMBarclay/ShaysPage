@@ -13,6 +13,7 @@ function MainPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [contact, setContact] = useState("");
   const fullText = `₊˚⊹⋆ Welcome to my World ₊⊹ 
 I love romance animes, 
 fantasy books & RPGs. 
@@ -108,6 +109,7 @@ useEffect(() => {
        //   alert("Message sent! Thank you! 💗");
         //  setName("");
          // setEmail("");
+         //setContact("");
        //   setMessage("");
        // } else {
        //   alert("Oops! Something went wrong. Please try again.");
@@ -196,7 +198,7 @@ useEffect(() => {
           <input
             type="text"
             name="name"
-            placeholder="Your name"
+            placeholder="Your name (required)"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -209,6 +211,14 @@ useEffect(() => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+          />
+
+           <input
+            type="text"
+            name="contact"
+            placeholder="Other forms of contact (optional)"
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
           />
 
           <textarea
