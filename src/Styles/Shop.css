@@ -227,6 +227,7 @@ p {
   display: inline-block;
   padding: 1rem 2rem;
   font-size: 1.6rem;
+  margin-bottom: 2rem;
   font-family: "Caveat", cursive;
   color: white !important;
   background: linear-gradient(135deg, #ffdce6, #fd7ba9);
