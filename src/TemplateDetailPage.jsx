@@ -29,9 +29,8 @@ const templates = [
       { src: gothtemp6, orientation: "landscape" },
     ],
     bio: "Gothic Red and Black link in bio style template with an animated blood moon to eclipse in the background, blood rain into a blood puddle on the bottom of the screen effect, red cursor, and custom animations for that gothic feel. Customizable in site with detailed instructions on how to deploy and post online for your very own website! A dark, elegant gothic-inspired aesthetic. Perfect for creators who love moody vibes and sharp contrasts. Responsive and customizable.",
+    editorLink: "https://blood-moon-template-editor.netlify.app/",
     demoLink: "https://shaysescape.netlify.app/",
-    buyLink: "https://ko-fi.com/s/e0eb3902fc",
-    tutorialLink: "https://www.youtube.com/watch?v=2yer6IxDFNw",
   },
   {
     id: "2",
@@ -44,9 +43,8 @@ const templates = [
       { src: fantasytemp5, orientation: "landscape" },
     ],
     bio: "Magical Fantasy inspired link in bio style template with a color changing background with sparkles, glowing magical book animation, cute custom cursor, and custom animations. Enchanting, fantasy-inspired, with whimsical fonts and layered visuals. Great for storytellers, artists, and creators. Comes with in site editor and instructions on how to deploy online for your very own website!",
+    editorLink: "https://fantasy-template-editor.netlify.app/",
     demoLink: "https://sylvariaes-realm.netlify.app/",
-    buyLink: "https://ko-fi.com/s/f47ad74939",
-    tutorialLink: "https://www.youtube.com/watch?v=2yer6IxDFNw",
   },
   {
     id: "3",
@@ -58,9 +56,8 @@ const templates = [
       { src: pasteltemp4, orientation: "landscape" },
     ],
     bio: "A Dreamy Pastel link in bio Template with a cute, pastel design, including multi colored stars animation in the background, floating hearts, cute shiny pastel buttons, and a custom cursor. All customizable. Soft, pastel-colored, designed with an airy and friendly aesthetic. Ideal for personal blogs or portfolio websites, content creators, and anyone who loves to dream in a land of color. Comes with the in site editor and detailed instructions on how to deploy online for your very own website!",
+    editorLink: "https://pastel-template-editor.netlify.app/",
     demoLink: "https://sylvs-star.netlify.app/",
-    buyLink: "https://ko-fi.com/s/fe15753ef1",
-    tutorialLink: "https://www.youtube.com/watch?v=2yer6IxDFNw",
   },
 ];
 
@@ -109,6 +106,16 @@ function TemplateDetail() {
 
       <div className="detail-container">
         <h1>{template.title}</h1>
+        {template.editorLink && (
+          <a
+            href={template.editorLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="editor-btn"
+          >
+            ✏️ Open Template Editor
+          </a>
+        )}
 
         {/* Bio */}
         <p className="template-bio">{template.bio}</p>
@@ -138,7 +145,7 @@ function TemplateDetail() {
           ))}
         </div>
 
-        {/* Buy Now Button */}
+        {/* Buy Now Button 
         <a
           href={template.buyLink}
           target="_blank"
@@ -148,7 +155,7 @@ function TemplateDetail() {
           💖 Buy Now
         </a>
 
-        {/* Tutorial Button */}
+        {/* Tutorial Button 
         {template.tutorialLink && (
           <a
             href={template.tutorialLink}
@@ -158,54 +165,7 @@ function TemplateDetail() {
           >
             🎥 Video Tutorial Here
           </a>
-        )}
-
-        {/* Refund Policy */}
-        <div className="refund-policy" id="refund-policy">
-          <h2>Refund Policy</h2>
-          <p>
-            Thank you for supporting my shop! Please read my refund policy
-            carefully before making a purchase.
-          </p>
-
-          <h3>Digital Products</h3>
-          <p>
-            All items in this shop are digital downloads. Because digital files
-            cannot be “returned” once downloaded, all sales are final and
-            non-refundable.
-          </p>
-
-          <h3>Accidental Purchases / Duplicate Orders</h3>
-          <p>
-            If you purchased the same item more than once by mistake, please
-            contact me within 48 hours of purchase. I’ll be happy to issue a
-            refund for duplicate orders.
-          </p>
-
-          <h3>File Issues</h3>
-          <p>
-            If you experience problems accessing or opening your files, please
-            reach out to me via the main page. I’ll gladly help you resolve the
-            issue and make sure you receive your templates.
-          </p>
-
-          <h3>Exceptions</h3>
-          <p>Refunds may be considered on a case-by-case basis only if:</p>
-          <ul>
-            <li>You never downloaded the files, and</li>
-            <li>You contact me within 7 days of purchase.</li>
-          </ul>
-
-          <h3>Support</h3>
-          <p>
-            I want you to be happy with your purchase! If you need assistance
-            customizing or using your template, please feel free to reach out on
-            the homepage in the send me a message section. Please note that I
-            can only respond as long as you provide a contact such as email,
-            Twitter/ TikTok/ Instagram or Discord handle. I’ll do my best to
-            help.
-          </p>
-        </div>
+        )} */}
 
         {/* Back Button */}
         <Link to="/shop" className="back-link">

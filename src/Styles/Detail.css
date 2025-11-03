@@ -64,18 +64,20 @@
   font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(250, 137, 193, 0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border: 3px solid #676767;
   cursor: url('../assets/pointer.png'), auto !important;
 }
 
 .detail-page .demo-link {
-  background: linear-gradient(90deg, #6dd5ed, #2193b0);
+  background: linear-gradient(90deg, #000000, #fff0fd);
 }
 .detail-page .demo-link:hover {
+  background: linear-gradient(90deg, #fff0fd, #282828);
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(109, 213, 237, 0.9);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
   cursor: url('../assets/pointer.png'), auto !important;
 }
 
@@ -117,7 +119,7 @@
   cursor: url('../assets/pointer.png'), auto !important;
 }
 
-.detail-page .refund-policy {
+ .refund-policy {
   background: #1a1a1a88;
   border: 2px solid #ffb6d9;
   border-radius: 15px;
@@ -129,7 +131,7 @@
   box-shadow: 0 0 15px #fba2cf50;
 }
 
-.detail-page .refund-policy h2 {
+ .refund-policy h2 {
   font-family: "Great Vibes", cursive;
   font-size: 2.5rem !important;
   margin-bottom: 1rem;
@@ -137,7 +139,7 @@
   text-align: center;
 }
 
-.detail-page .refund-policy h3 {
+.refund-policy h3 {
   font-family: "Caveat", cursive;
   font-size: 2rem !important;
   margin-top: 1rem;
@@ -145,20 +147,20 @@
   color: #ff6392;
 }
 
-.detail-page .refund-policy p {
+.refund-policy p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 0.8rem;
   color: #f7e9f1;
 }
 
-.detail-page .refund-policy ul {
+.refund-policy ul {
   padding-left: 1.5rem;
   margin: 0.5rem 0;
   list-style-type: disc;
 }
 
-.detail-page .refund-policy li {
+ .refund-policy li {
   font-size: 1.7rem !important;
 }
 
@@ -183,6 +185,46 @@
 .tutorial-btn:hover {
   background-color: #ff75b8;
   transform: scale(1.05);
+}
+
+.editor-btn {
+  font-family: "Great Vibes", cursive !important;
+  font-size: 1.8rem !important;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #ff85a2, #ffb6d9);
+  color: #000;
+  border: 3px solid #ffb6d9;
+  border-radius: 9999px;
+  padding: 0.8rem 1.8rem;
+  box-shadow: 0 0 12px #ff9ac2aa, 0 0 25px #ffb6d9aa;
+  cursor: url('../assets/pointer.png'), auto !important;
+  transition: 
+    background 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out,
+    transform 0.2s ease-in-out;
+  text-shadow: 0 0 8px #ffc0da;
+  animation: glowPulse 3s infinite alternate;
+  user-select: none;
+  text-decoration: none !important; 
+}
+
+.editor-btn:hover {
+  background: linear-gradient(135deg, #ff9fc0, #ff6fa5);
+  color: #000;
+  box-shadow: 
+    0 0 20px #fd8eafcc,
+    0 0 40px #ffb6d9bb;
+  transform: scale(1.08);
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px #ff85a2aa, 0 0 20px #ffb6d9aa;
+  }
+  100% {
+    box-shadow: 0 0 25px #ff85a2cc, 0 0 45px #ffb6d9cc;
+  }
 }
 
 

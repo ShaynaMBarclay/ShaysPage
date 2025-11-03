@@ -14,7 +14,6 @@ const templates = [
 function TemplatesShop() {
   const [fadeIn, setFadeIn] = useState(false);
 
-  
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -44,37 +43,67 @@ function TemplatesShop() {
       <div className="moon"></div>
 
       <div className="container">
-
         {/* === Return to Main Page Button === */}
         <div className="return-main-button-container">
-          <Link to="/" className="return-main-button">← Return to Main Page</Link>
+          <Link to="/" className="return-main-button">
+            ← Return to Main Page
+          </Link>
         </div>
 
-        <h1>Templates Shop Currently: Closed</h1>
-        <p style={{ color: 'red' }}>
+        <h1>Customizable "link in bio" website editors</h1>
 
-          The Shop is being updated! Soon, each template will have a code-free version that’s easy to customize. While these won’t have as many options as the fully codeable versions, they’re perfect for a simple, hassle-free experience. Coming soon!</p>
-        {/*<p>
-          Click on a template to view more details! If you have any questions or need support, please send me a message on the main page, and include your contact information. Please refer to the{" "}
-           <Link to="/shop/1#refund-policy"
-           className="custom-cursor-link"
-            style={{ color: "#ff6392", textDecoration: "underline" }}>
-             refund policy
-          </Link>{" "}
+        <p>
+          Click on a template to use its editor, it’s free! But if you love it
+          ♡, please consider leaving a tip on my{" "}
+          <a
+            href="https://ko-fi.com/shaydotexe"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#ff6392",
+              textDecoration: "underline",
+              fontWeight: "bold",
+            }}
+          >
+            Ko-fi
+          </a>
+          . If you have any questions or need support, please send me a message
+          on the main page and include your contact information.
+        </p>
+
+        {/* === Custom Link-in-Bio Section === */}
+        <p>
+          Looking for something unique? Please include a contact as well as
+          details about your idea! I will get back to you soon. Please refer to
+          the{" "}
+          <a
+            href="#refund-policy"
+            onClick={(e) => {
+              e.preventDefault();
+              const refundSection = document.getElementById("refund-policy");
+              if (refundSection) {
+                refundSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="custom-cursor-link"
+            style={{ color: "#ff6392", textDecoration: "underline" }}
+          >
+            refund policy
+          </a>{" "}
           before making any purchases.
-          </p>*/}
+        </p>
 
-          {/* === Custom Link-in-Bio Section === */}
-            <div className="custom-link-bio">
-             <p>Looking for something unique? Please include a contact as well as details about your idea! I will get back to you soon.</p>
-               <Link 
-               to="/#message"
-               className="custom-bio-button"
-               style={{ color: "#ff6392", textDecoration: "underline", fontWeight: "bold" }}
-                >
-                Request a custom Link-in-Bio site ✨
-               </Link>
-               </div>
+        <Link
+          to="/#message"
+          className="custom-bio-button"
+          style={{
+            color: "#ff6392",
+            textDecoration: "underline",
+            fontWeight: "bold",
+          }}
+        >
+          Request a custom Link-in-Bio site ✨
+        </Link>
 
         <div className="template-grid">
           {templates.map((template) => (
@@ -91,6 +120,54 @@ function TemplatesShop() {
               <h2>{template.title}</h2>
             </Link>
           ))}
+        </div>
+
+        {/* Refund Policy */}
+        <div className="refund-policy" id="refund-policy">
+          <h2>Refund Policy -- Please disregard if you did not request a commission.</h2>
+          <p>
+            Thank you so much for your support! Each commission is made by hand
+            with care and time investment, so please review the policy below
+            before placing your order.
+          </p>
+
+          <h3>Custom Commissions</h3>
+          <p>
+            All commissions are personalized digital services. Because each
+            piece is created specifically for you, refunds are generally not
+            available once work has begun.
+          </p>
+
+          <h3>Cancellations</h3>
+          <p>
+            If you wish to cancel your commission, please contact me within 24
+            hours of payment. If I haven’t started the project yet, I’ll
+            happily provide a full refund. Once work has started, refunds are
+            no longer possible.
+          </p>
+
+          <h3>Revisions</h3>
+          <p>
+            Minor revisions are included to ensure you’re happy with the final
+            result! Major changes or complete redesigns may require an
+            additional fee, depending on the scope.
+          </p>
+
+          <h3>Exceptional Circumstances</h3>
+          <p>Refunds may be considered only if:</p>
+          <ul>
+            <li>The commission has not yet started, and</li>
+            <li>You contact me within 24 hours of payment.</li>
+          </ul>
+
+          <h3>Support</h3>
+          <p>
+            I want you to absolutely love your finished commission! If you have
+            any questions or need assistance during or after the process, please
+            reach out through the main page in the "Send Me a Message" section.
+            Be sure to include a contact method (email, Twitter, TikTok,
+            Instagram, or Discord) so I can get back to you quickly.
+          </p>
         </div>
       </div>
     </div>
