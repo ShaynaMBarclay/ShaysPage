@@ -122,6 +122,70 @@ function TemplatesShop() {
           ))}
         </div>
 
+        <div className="netlify-instructions" id="netlify-instructions">
+  <h2>How to Publish Your Template with Netlify (Drag & Drop Method)</h2>
+  <ol>
+    <li>Export your template changes from the editor, it will be a ZIP file.</li>
+    <li>
+      Locate the downloaded .zip file of your template. Right-click the file
+      and select “Extract All…” (Windows) or “Open With → Archive Utility” (Mac).
+      Choose a folder where you want the files to be saved.
+    </li>
+    <li>
+      Create a free Netlify account at{" "}
+      <a
+        href="https://www.netlify.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#ff6392", textDecoration: "underline" }}
+      >
+        Netlify.com
+      </a>
+      .
+    </li>
+    <li>
+      Once logged in, go to your Netlify dashboard, or "Projects" and drag your
+      unzipped folder (the one containing all subfolders) into the “Sites/Projects”
+      area to deploy your site.
+    </li>
+    <li>
+      After deployment, you can change your domain name under “Domain settings”
+      in the website dashboard or purchase a custom domain through Netlify.
+    </li>
+    <li>
+      Your template is now live! You can share the link or further customize it
+      by reusing the editor, exporting, unzipping, and updating the deployment.
+    </li>
+  </ol>
+
+  <div>
+    <p>
+      If you prefer a video tutorial, you can watch it here:{" "}
+      <a
+        href="https://www.youtube.com/watch?v=etZ9HSUoTPU"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#ff6392", textDecoration: "underline", fontWeight: "bold" }}
+      >
+        Netlify Drag & Drop Tutorial
+      </a>
+    </p>
+
+    <h3>Using a Phone?</h3>
+    <p>
+      You can still deploy your template on Netlify from a mobile device! Here are some tips:
+    </p>
+    <ul>
+      <li>You can use the editor on your phone as normal but ensure your file manager supports browser downloads.</li>
+      <li>Export and unzip your template files on your phone (some file manager apps allow this).</li>
+      <li>Open the Netlify website in your mobile browser and log in or sign up.</li>
+      <li>Use the "Drag & Drop" area to select the unzipped folder from your phone storage.</li>
+      <li>Change your domain if needed or use the default Netlify subdomain.</li>
+      <li>If you're having trouble deploying on your phone, email yourself the exported file and deploy from a computer.</li>
+    </ul>
+  </div>
+</div>
+
         {/* Refund Policy */}
         <div className="refund-policy" id="refund-policy">
           <h2>Refund Policy -- Please disregard if you did not request a commission.</h2>
