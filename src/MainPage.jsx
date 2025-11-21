@@ -97,25 +97,25 @@ useEffect(() => {
       return;
     }
 
-    alert("Messaging is temporarily closed 💌 Please check back soon, or message me on Twitter @Sylvariae for help. And to the one harassing me, may you find peace (and maybe a nice patch of grass) 💕");
+    
 
-    //fetch("https://formspree.io/f/mldlbeda", {
-      //method: "POST",
-     // headers: { "Content-Type": "application/json" },
-      //body: JSON.stringify({ name, email, message }),
-    //})
-      //.then((response) => {
-       // if (response.ok) {
-       //   alert("Message sent! Thank you! 💗");
-        //  setName("");
-         // setEmail("");
-         //setContact("");
-       //   setMessage("");
-       // } else {
-       //   alert("Oops! Something went wrong. Please try again.");
-      //  }
-     // })
-     // .catch(() => alert("Oops! Something went wrong."));
+    fetch("https://formspree.io/f/mldlbeda", {
+      method: "POST",
+     headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    })
+      .then((response) => {
+        if (response.ok) {
+        alert("Message sent! Thank you! 💗");
+         setName("");
+          setEmail("");
+         setContact("");
+          setMessage("");
+        } else {
+          alert("Oops! Something went wrong. Please try again.");
+       }
+     })
+      .catch(() => alert("Oops! Something went wrong."));
   };
 
   return (
