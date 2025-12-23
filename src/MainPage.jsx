@@ -127,9 +127,6 @@ useEffect(() => {
 
         <div className="about-container">
           <div className="socials" id="socials">
-            <a href="https://x.com/sylvariae" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              💗<FaTwitter />
-            </a>
             <a href="https://www.instagram.com/shaydotexe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               💗<FaInstagram />
             </a>
@@ -175,9 +172,7 @@ useEffect(() => {
             <a href="https://lacucinadishay.com/" target="_blank" rel="noopener noreferrer">
               Shay's Kitchen
             </a>
-            <a href="https://pathfinders-tale.com/" target="_blank" rel="noopener noreferrer">
-              Pathfinder's Tale
-            </a>
+
           </div>
         </div>
 
