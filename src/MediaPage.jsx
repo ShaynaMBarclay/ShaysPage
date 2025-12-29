@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
 function MediaPage() {
+   const [lightbox, setLightbox] = useState(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -32,6 +34,7 @@ function MediaPage() {
       moon.remove();
     };
   }, []);
+  
 
   return (
     <div className="container">
