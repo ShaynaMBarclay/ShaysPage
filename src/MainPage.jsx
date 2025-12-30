@@ -233,27 +233,51 @@ useEffect(() => {
         <div className="songs" id="music">
           <h2>─•──── 𖦤</h2>
           <div className="embed">
-            <iframe
-              style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/track/0hKjGGWCAthLTNAbO5drvs?utm_source=generator"
-              width="100%"
-              height="152"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div className="embed">
-            <iframe
-              style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/track/2qc2uSwYlXSg5msv7VZ81c?utm_source=generator"
-              width="100%"
-              height="152"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>
+  <iframe
+    style={{ borderRadius: "12px" }}
+    src="https://open.spotify.com/embed/track/1A1XuDIYZxSKrQ6mzkWwAT?utm_source=generator"
+    width="100%"
+    height="152"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  />
+</div>
+
+<div className="embed">
+  <iframe
+    style={{ borderRadius: "12px" }}
+    src="https://open.spotify.com/embed/track/4GJ1Ob57yFn4wuhNrBPQYc?utm_source=generator&theme=0"
+    width="100%"
+    height="152"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  />
+</div>
+<div className="embed">
+  <iframe
+    style={{ borderRadius: "12px" }}
+    src="https://open.spotify.com/embed/track/0LmAARgGgLbxP1kZADTjRi?utm_source=generator"
+    width="100%"
+    height="152"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  />
+</div>
+<div className="embed">
+  <iframe
+    style={{ borderRadius: "12px" }}
+    src="https://open.spotify.com/embed/track/3yubyWatnRRLHkIsN1ZI2Q?utm_source=generator&theme=0"
+    width="100%"
+    height="152"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  />
+</div>
+
           <div className="embed">
             <iframe
               style={{ borderRadius: "12px" }}
@@ -265,6 +289,31 @@ useEffect(() => {
               loading="lazy"
             ></iframe>
           </div>
+
+          <div className="embed">
+  <iframe
+    style={{ borderRadius: "12px" }}
+    src="https://open.spotify.com/embed/track/2lVGHZBnWWJmaerMA7IsfF?utm_source=generator"
+    width="100%"
+    height="152"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  />
+</div>
+<div className="embed">
+  <iframe
+    style={{ borderRadius: "12px" }}
+    src="https://open.spotify.com/embed/track/2l3SCP5KWRhuKWTbi5zp0j?utm_source=generator"
+    width="100%"
+    height="152"
+    frameBorder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  />
+</div>
+
+
         </div>
       </div>
     </div>
